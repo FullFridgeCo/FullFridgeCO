@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Started | Book a Personal Chef in Arvada, CO | Full Fridge Co.</title>
+  <meta name="description" content="Book a free 15-minute call with Jordyn, an in-home personal chef in Arvada, CO. Fill out the intake form to start weekly meal prep in the Denver area.">
+  <link rel="canonical" href="https://fullfridgeco.com/get-started.html">
+
+  <!-- Social share preview (Facebook, iMessage, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Full Fridge Co.">
+  <meta property="og:title" content="Get Started | Book a Personal Chef in Arvada, CO | Full Fridge Co.">
+  <meta property="og:description" content="Book a free 15-minute call with Jordyn, an in-home personal chef in Arvada, CO. Fill out the intake form to start weekly meal prep in the Denver area.">
+  <meta property="og:image" content="https://fullfridgeco.com/images/social-share.png">
+  <meta property="og:url" content="https://fullfridgeco.com/get-started.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fbf6ea">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..700,100;1,9..144,500,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- The sketchy pencil effect for all the drawings. Keep this on every page. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="sketchy" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and referral banner come from js/site.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div>
+          <span class="eyebrow">Get started</span>
+          <h1>Let's get started</h1>
+          <p class="lede">Hi, I'm Jordyn! I'm so glad you're here. This form helps me get to know you and your family so I can cook food you'll really love. It takes about 10 minutes, and there are no wrong answers. If your honest answer is "we eat a lot of takeout and we're tired," that's a great place to start. Once you send it, I'll reach out within a day to set up a quick call.</p>
+        </div>
+        <svg class="doodle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><rect x="32" y="12" width="40" height="76" rx="7" class="fill-mustard"/><rect x="28" y="8" width="40" height="76" rx="7" class="line"/><path class="line line--thin" d="M42 16 L54 16 M44 76 L52 76"/><path class="fill-cream" d="M34 28 L62 28 L62 50 L44 50 L38 56 L38 50 L34 50 Z"/><path class="line line--thin" d="M34 28 L62 28 L62 50 L44 50 L38 56 L38 50 L34 50 Z M40 36 L56 36 M40 42 L52 42"/><path class="line line--thin" d="M76 30 C 82 34, 82 42, 76 46 M82 24 C 92 32, 92 44, 82 52"/></g></svg>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="call-title" style="padding-bottom:2.5rem">
+      <div class="container narrow">
+        <div class="panel" style="text-align:center">
+          <h2 id="call-title" style="font-size:1.6rem">Rather talk first?</h2>
+          <p>You can book a free 15-minute call right now, and fill out the form whenever you're ready.</p>
+          <!-- EDIT ME: put your scheduling link in the href below -->
+          <a class="btn btn--primary" href="#">Book a free 15-minute call</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="intake-title" style="padding-top:2.5rem">
+      <div class="container narrow">
+        <h2 id="intake-title" class="visually-hidden">New client intake form</h2>
+        <p class="form-intro fine">Questions marked <span class="optional">(optional)</span> can be skipped. Everything else helps me plan your meals.</p>
+        <ol class="form-progress" aria-label="Form sections">
+          <li><a href="#section-household"><span>1</span>About your household</a></li>
+          <li><a href="#section-week"><span>2</span>Your week</a></li>
+          <li><a href="#section-food"><span>3</span>Food you love (and don't)</a></li>
+          <li><a href="#section-dietary"><span>4</span>Dietary needs</a></li>
+          <li><a href="#section-kitchen"><span>5</span>Your kitchen</a></li>
+          <li><a href="#section-fine-print"><span>6</span>The fine print</a></li>
+        </ol>
+
+        <form class="intake-form" name="intake" method="POST" action="/thanks-intake.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="intake">
+          <p class="honeypot"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+          <!-- ========== SECTION 1: ABOUT YOUR HOUSEHOLD ========== -->
+          <section class="form-section" id="section-household" aria-labelledby="section-household-title">
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">1</span>
+              <div>
+                <span class="form-section__step">Part 1 of 6</span>
+                <h2 id="section-household-title">About your household</h2>
+                <p>Let's start with the basics so I know who I'm cooking for and how to reach you.</p>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="first_name">First name</label>
+                <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="last_name">Last name</label>
+                <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="partner_name">Partner or other adult in the home (name) <span class="optional">(optional)</span></label>
+                <input type="text" id="partner_name" name="partner_name">
+              </div>
+              <div class="field">
+                <label for="partner_email">Partner's email (so you both get the weekly menu) <span class="optional">(optional)</span></label>
+                <input type="email" id="partner_email" name="partner_email">
+              </div>
+            </div>
+            <div class="field">
+              <label for="street">Home address (where I'll be cooking)</label>
+              <span class="hint" id="street-hint">Street address</span>
+              <input type="text" id="street" name="street" required autocomplete="street-address" aria-describedby="street-hint">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required autocomplete="address-level2">
+              </div>
+              <div class="field">
+                <label for="zip">ZIP</label>
+                <input type="text" id="zip" name="zip" required autocomplete="postal-code" inputmode="numeric">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="adults">How many adults am I cooking for?</label>
+                <input type="number" id="adults" name="adults" required min="1" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="kids">How many kids am I cooking for?</label>
+                <input type="number" id="kids" name="kids" required min="0" inputmode="numeric">
+              </div>
+            </div>
+            <div class="field is-hidden" data-show-if="kids&gt;0">
+              <label for="kids_ages">Kids' ages</label>
+              <input type="text" id="kids_ages" name="kids_ages" data-required-if-shown>
+            </div>
+            <fieldset class="field">
+              <legend>Best way to reach you</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="best_way_to_reach" value="Text" required> Text</label>
+                <label class="choice"><input type="radio" name="best_way_to_reach" value="Call"> Call</label>
+                <label class="choice"><input type="radio" name="best_way_to_reach" value="Email"> Email</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>How did you hear about Full Fridge Co.?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="heard_about" value="Friend referral" required> Friend referral</label>
+                <label class="choice"><input type="radio" name="heard_about" value="Google"> Google</label>
+                <label class="choice"><input type="radio" name="heard_about" value="Substack"> Substack</label>
+                <label class="choice"><input type="radio" name="heard_about" value="Neighborhood group"> Neighborhood group</label>
+                <label class="choice"><input type="radio" name="heard_about" value="Other"> Other</label>
+              </div>
+            </fieldset>
+            <div class="field is-hidden" data-show-if="heard_about=Friend referral">
+              <label for="referred_by">If a friend referred you, who? (so they get their free add-on)</label>
+              <input type="text" id="referred_by" name="referred_by" data-required-if-shown>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 2: YOUR WEEK ========== -->
+          <section class="form-section" id="section-week" aria-labelledby="section-week-title">
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">2</span>
+              <div>
+                <span class="form-section__step">Part 2 of 6</span>
+                <h2 id="section-week-title">Your week</h2>
+                <p>Tell me a little about your week. This helps me find the best day to come cook for you and plan food that fits your life.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="typical_week">What does a typical week look like for your household? (work, kids' activities, workouts, travel)</label>
+              <textarea id="typical_week" name="typical_week" required></textarea>
+            </div>
+            <div class="field">
+              <label for="hard_week">What does a hard week look like for you, and what would make it feel lighter? <span class="optional">(optional)</span></label>
+              <textarea id="hard_week" name="hard_week"></textarea>
+            </div>
+            <fieldset class="field" data-required-group>
+              <legend>Which meals do you want help with?</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="meals_wanted[]" value="Breakfast"> Breakfast</label>
+                <label class="choice"><input type="checkbox" name="meals_wanted[]" value="Lunch"> Lunch</label>
+                <label class="choice"><input type="checkbox" name="meals_wanted[]" value="Dinner"> Dinner</label>
+                <label class="choice"><input type="checkbox" name="meals_wanted[]" value="Snacks"> Snacks</label>
+                <label class="choice"><input type="checkbox" name="meals_wanted[]" value="Desserts"> Desserts</label>
+                <label class="choice"><input type="checkbox" name="meals_wanted[]" value="Soups"> Soups</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="servings_per_week">Roughly how many servings per week are you hoping for? <span class="optional">(optional)</span></label>
+              <input type="text" id="servings_per_week" name="servings_per_week" placeholder="e.g. 4 dinners for 2">
+            </div>
+            <fieldset class="field" data-required-group>
+              <legend>Which days could work for your cook day?</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="cook_days[]" value="Monday"> Monday</label>
+                <label class="choice"><input type="checkbox" name="cook_days[]" value="Tuesday"> Tuesday</label>
+                <label class="choice"><input type="checkbox" name="cook_days[]" value="Wednesday"> Wednesday</label>
+                <label class="choice"><input type="checkbox" name="cook_days[]" value="Thursday"> Thursday</label>
+                <label class="choice"><input type="checkbox" name="cook_days[]" value="Friday"> Friday</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>Morning or afternoon?</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="time_of_day[]" value="Morning (8 am to 12 pm)"> Morning (8 am to 12 pm)</label>
+                <label class="choice"><input type="checkbox" name="time_of_day[]" value="Afternoon (12 to 5 pm)"> Afternoon (12 to 5 pm)</label>
+                <label class="choice"><input type="checkbox" name="time_of_day[]" value="Either"> Either</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>What do you most want from this service?</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="goals[]" value="More time"> More time</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="Healthier eating"> Healthier eating</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="Less takeout"> Less takeout</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="Less food waste"> Less food waste</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="Fewer grocery trips"> Fewer grocery trips</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="More family time"> More family time</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="Less stress"> Less stress</label>
+                <label class="choice"><input type="checkbox" name="goals[]" value="Other"> Other</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>How often do you usually eat out or order in each week? <span class="optional">(optional)</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="eat_out" value="0 to 1 times"> 0 to 1 times</label>
+                <label class="choice"><input type="radio" name="eat_out" value="2 to 3 times"> 2 to 3 times</label>
+                <label class="choice"><input type="radio" name="eat_out" value="4 to 6 times"> 4 to 6 times</label>
+                <label class="choice"><input type="radio" name="eat_out" value="Most nights"> Most nights</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- ========== SECTION 3: FOOD YOU LOVE (AND DON'T) ========== -->
+          <section class="form-section" id="section-food" aria-labelledby="section-food-title">
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">3</span>
+              <div>
+                <span class="form-section__step">Part 3 of 6</span>
+                <h2 id="section-food-title">Food you love (and don't)</h2>
+                <p>This is the fun part! The more you share, the better I can cook for you.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="top_5_meals">Your top 5 favorite meals</label>
+              <textarea id="top_5_meals" name="top_5_meals" required></textarea>
+            </div>
+            <div class="field">
+              <label for="never_again_meals">Meals you never want to see again <span class="optional">(optional)</span></label>
+              <textarea id="never_again_meals" name="never_again_meals"></textarea>
+            </div>
+            <div class="field">
+              <label for="loved_ingredients">Ingredients you love <span class="optional">(optional)</span></label>
+              <textarea id="loved_ingredients" name="loved_ingredients"></textarea>
+            </div>
+            <div class="field">
+              <label for="disliked_ingredients">Ingredients you dislike</label>
+              <textarea id="disliked_ingredients" name="disliked_ingredients" required></textarea>
+            </div>
+            <fieldset class="field" data-required-group>
+              <legend>Cuisines you enjoy</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="American comfort"> American comfort</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Italian"> Italian</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Mexican"> Mexican</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Mediterranean"> Mediterranean</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Middle Eastern"> Middle Eastern</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Asian"> Asian</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Indian"> Indian</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="French"> French</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Southern"> Southern</label>
+                <label class="choice"><input type="checkbox" name="cuisines[]" value="Other"> Other</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Spice level</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="spice_level" value="Mild" required> Mild</label>
+                <label class="choice"><input type="radio" name="spice_level" value="Medium"> Medium</label>
+                <label class="choice"><input type="radio" name="spice_level" value="Hot"> Hot</label>
+                <label class="choice"><input type="radio" name="spice_level" value="Mixed household (mild for some)"> Mixed household (mild for some)</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>Proteins you like</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Chicken"> Chicken</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Turkey"> Turkey</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Beef"> Beef</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Bison"> Bison</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Pork"> Pork</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Lamb"> Lamb</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Eggs"> Eggs</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Tofu"> Tofu</label>
+                <label class="choice"><input type="checkbox" name="proteins[]" value="Beans and lentils"> Beans and lentils</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>Seafood you like</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="seafood[]" value="Salmon"> Salmon</label>
+                <label class="choice"><input type="checkbox" name="seafood[]" value="Shrimp"> Shrimp</label>
+                <label class="choice"><input type="checkbox" name="seafood[]" value="Cod or white fish"> Cod or white fish</label>
+                <label class="choice"><input type="checkbox" name="seafood[]" value="Tuna"> Tuna</label>
+                <label class="choice"><input type="checkbox" name="seafood[]" value="Scallops"> Scallops</label>
+                <label class="choice"><input type="checkbox" name="seafood[]" value="Crab"> Crab</label>
+                <label class="choice"><input type="checkbox" name="seafood[]" value="No seafood"> No seafood</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>Grains and starches you like</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="White rice"> White rice</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Brown rice"> Brown rice</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Quinoa"> Quinoa</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Couscous"> Couscous</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Farro"> Farro</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Pasta"> Pasta</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Potatoes"> Potatoes</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Sweet potatoes"> Sweet potatoes</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Tortillas"> Tortillas</label>
+                <label class="choice"><input type="checkbox" name="grains_starches[]" value="Bread"> Bread</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Beans you like <span class="optional">(optional)</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="beans[]" value="Black"> Black</label>
+                <label class="choice"><input type="checkbox" name="beans[]" value="Pinto"> Pinto</label>
+                <label class="choice"><input type="checkbox" name="beans[]" value="White or cannellini"> White or cannellini</label>
+                <label class="choice"><input type="checkbox" name="beans[]" value="Kidney"> Kidney</label>
+                <label class="choice"><input type="checkbox" name="beans[]" value="Chickpeas"> Chickpeas</label>
+                <label class="choice"><input type="checkbox" name="beans[]" value="Lentils"> Lentils</label>
+                <label class="choice"><input type="checkbox" name="beans[]" value="No beans"> No beans</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="favorite_vegetables">Favorite vegetables <span class="optional">(optional)</span></label>
+              <textarea id="favorite_vegetables" name="favorite_vegetables"></textarea>
+            </div>
+            <div class="field">
+              <label for="vegetables_to_avoid">Vegetables to avoid <span class="optional">(optional)</span></label>
+              <textarea id="vegetables_to_avoid" name="vegetables_to_avoid"></textarea>
+            </div>
+            <fieldset class="field">
+              <legend>Greens you like <span class="optional">(optional)</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="greens[]" value="Romaine"> Romaine</label>
+                <label class="choice"><input type="checkbox" name="greens[]" value="Spinach"> Spinach</label>
+                <label class="choice"><input type="checkbox" name="greens[]" value="Arugula"> Arugula</label>
+                <label class="choice"><input type="checkbox" name="greens[]" value="Kale"> Kale</label>
+                <label class="choice"><input type="checkbox" name="greens[]" value="Mixed greens"> Mixed greens</label>
+                <label class="choice"><input type="checkbox" name="greens[]" value="Butter lettuce"> Butter lettuce</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Cheeses you like <span class="optional">(optional)</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Parmesan"> Parmesan</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Mozzarella"> Mozzarella</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Cheddar"> Cheddar</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Feta"> Feta</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Goat"> Goat</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Blue"> Blue</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="Gruyere"> Gruyere</label>
+                <label class="choice"><input type="checkbox" name="cheeses[]" value="No cheese"> No cheese</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Pasta as a main meal?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="pasta_as_main" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="pasta_as_main" value="No"> No</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Soup as a main meal?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="soup_as_main" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="soup_as_main" value="No"> No</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Salad as a main meal?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="salad_as_main" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="salad_as_main" value="No"> No</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Meatless meals now and then?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="meatless_meals" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="meatless_meals" value="No"> No</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Okay with the same dish twice in one week?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="same_dish_twice" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="same_dish_twice" value="No"> No</label>
+              </div>
+            </fieldset>
+            <div class="field is-hidden" data-show-if="kids&gt;0">
+              <label for="kids_food_notes">Kids: picky eaters? Want simpler kid portions?</label>
+              <textarea id="kids_food_notes" name="kids_food_notes" data-required-if-shown></textarea>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 4: DIETARY NEEDS ========== -->
+          <section class="form-section" id="section-dietary" aria-labelledby="section-dietary-title">
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">4</span>
+              <div>
+                <span class="form-section__step">Part 4 of 6</span>
+                <h2 id="section-dietary-title">Dietary needs</h2>
+                <p>Let me know about any food needs in your home so I can keep everyone safe and happy.</p>
+              </div>
+            </div>
+            <div class="callout"><p>I'm happy to cook gluten-free (made without gluten), vegetarian, and nut-free meals. I'm not able to do vegan or dairy-free, and I don't count macros, but I'll always give you a full list of ingredients. My cooking isn't certified allergen-free, so if someone in your home has a serious allergy or celiac disease, please let me know here. We'll talk it through together on our call.</p></div>
+            <fieldset class="field">
+              <legend>Does anyone eat gluten-free?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="gluten_free" value="Everyone" required> Everyone</label>
+                <label class="choice"><input type="radio" name="gluten_free" value="Some of us"> Some of us</label>
+                <label class="choice"><input type="radio" name="gluten_free" value="No one"> No one</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Does anyone eat vegetarian?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="vegetarian" value="Everyone" required> Everyone</label>
+                <label class="choice"><input type="radio" name="vegetarian" value="Some of us"> Some of us</label>
+                <label class="choice"><input type="radio" name="vegetarian" value="No one"> No one</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Do you need nut-free meals?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="nut_free" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="nut_free" value="No"> No</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="allergies">Any allergies or intolerances? Who, and how severe?</label>
+              <span class="hint" id="allergies-hint">"None" is fine.</span>
+              <textarea id="allergies" name="allergies" required aria-describedby="allergies-hint"></textarea>
+            </div>
+            <div class="field">
+              <label for="other_eating_notes">Anything else about how your household eats? (cultural, religious, health) <span class="optional">(optional)</span></label>
+              <textarea id="other_eating_notes" name="other_eating_notes"></textarea>
+            </div>
+          </section>
+
+          <!-- ========== SECTION 5: YOUR KITCHEN ========== -->
+          <section class="form-section" id="section-kitchen" aria-labelledby="section-kitchen-title">
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">5</span>
+              <div>
+                <span class="form-section__step">Part 5 of 6</span>
+                <h2 id="section-kitchen-title">Your kitchen</h2>
+                <p>Since I'll be cooking in your kitchen, here's what I need to know to make cook day easy for you.</p>
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend>How will I get in on cook day?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="home_access" value="Someone will be home" required> Someone will be home</label>
+                <label class="choice"><input type="radio" name="home_access" value="Door code"> Door code</label>
+                <label class="choice"><input type="radio" name="home_access" value="Lockbox"> Lockbox</label>
+                <label class="choice"><input type="radio" name="home_access" value="Spare key"> Spare key</label>
+                <label class="choice"><input type="radio" name="home_access" value="Let's discuss"> Let's discuss</label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="pets">Any pets? Names and instructions</label>
+              <span class="hint" id="pets-hint">"None" is fine.</span>
+              <textarea id="pets" name="pets" required aria-describedby="pets-hint"></textarea>
+            </div>
+            <div class="field">
+              <label for="parking_notes">Parking or building notes <span class="optional">(optional)</span></label>
+              <input type="text" id="parking_notes" name="parking_notes">
+            </div>
+            <fieldset class="field">
+              <legend>Stovetop type</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="stovetop" value="Gas" required> Gas</label>
+                <label class="choice"><input type="radio" name="stovetop" value="Electric"> Electric</label>
+                <label class="choice"><input type="radio" name="stovetop" value="Induction"> Induction</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>Kitchen equipment you have</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Oven"> Oven</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Microwave"> Microwave</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Slow cooker"> Slow cooker</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Instant Pot"> Instant Pot</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Air fryer"> Air fryer</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Blender"> Blender</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Food processor"> Food processor</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Sheet pans"> Sheet pans</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Large pot"> Large pot</label>
+                <label class="choice"><input type="checkbox" name="equipment[]" value="Large skillet"> Large skillet</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Do you have the starter container set? (about 20 glass containers with lids, two 9x13 dishes, 4 quart containers)</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="containers" value="Yes" required> Yes</label>
+                <label class="choice"><input type="radio" name="containers" value="I'll get them before my first cook day"> I'll get them before my first cook day</label>
+                <label class="choice"><input type="radio" name="containers" value="Please send me links"> Please send me links</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Can I use your pantry staples? (oil, salt, pepper, basic spices)</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="pantry_staples" value="Yes, use mine" required> Yes, use mine</label>
+                <label class="choice"><input type="radio" name="pantry_staples" value="No, please buy what you need"> No, please buy what you need</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-required-group>
+              <legend>How will you usually reheat meals?</legend>
+              <div class="choices">
+                <label class="choice"><input type="checkbox" name="reheat[]" value="Microwave"> Microwave</label>
+                <label class="choice"><input type="checkbox" name="reheat[]" value="Oven"> Oven</label>
+                <label class="choice"><input type="checkbox" name="reheat[]" value="Stovetop"> Stovetop</label>
+                <label class="choice"><input type="checkbox" name="reheat[]" value="Air fryer"> Air fryer</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- ========== SECTION 6: THE FINE PRINT ========== -->
+          <section class="form-section" id="section-fine-print" aria-labelledby="section-fine-print-title">
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">6</span>
+              <div>
+                <span class="form-section__step">Part 6 of 6</span>
+                <h2 id="section-fine-print-title">The fine print</h2>
+                <p>Just a few quick things so we're on the same page. You won't need to enter any card details here. We'll set that up together after our call.</p>
+              </div>
+            </div>
+            <label class="agree"><input type="checkbox" name="agree_pricing" value="Yes" required> <span>I understand pricing is a per-serving service fee plus groceries at cost, with an itemized receipt after each cook day, and a $250 minimum per cook day</span></label>
+            <label class="agree"><input type="checkbox" name="agree_deadlines" value="Yes" required> <span>I understand picks, skips and cancellations are due by Friday at noon, and if I don't pick or skip, I'll receive Chef's Picks</span></label>
+            <label class="agree"><input type="checkbox" name="agree_4_days" value="Yes" required> <span>I understand meals are best eaten within 4 days of my cook day</span></label>
+            <label class="agree"><input type="checkbox" name="agree_square" value="Yes" required> <span>I understand my card will be set up through Square after our call</span></label>
+            <div class="field">
+              <label for="anything_else">Anything else you'd like me to know? <span class="optional">(optional)</span></label>
+              <textarea id="anything_else" name="anything_else"></textarea>
+            </div>
+          </section>
+
+          <div class="form-submit">
+            <button class="btn btn--primary" type="submit">Send it to Jordyn</button>
+            <p>I'll text you within 24 hours to set up our free call.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer comes from js/site.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/site.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

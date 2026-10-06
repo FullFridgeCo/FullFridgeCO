@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found | Full Fridge Co.</title>
+  <meta name="description" content="This page couldn't be found.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://fullfridgeco.com/404.html">
+
+  <!-- Social share preview (Facebook, iMessage, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Full Fridge Co.">
+  <meta property="og:title" content="Page Not Found | Full Fridge Co.">
+  <meta property="og:description" content="This page couldn't be found.">
+  <meta property="og:image" content="https://fullfridgeco.com/images/social-share.png">
+  <meta property="og:url" content="https://fullfridgeco.com/404.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fbf6ea">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..700,100;1,9..144,500,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- The sketchy pencil effect for all the drawings. Keep this on every page. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="sketchy" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and referral banner come from js/site.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <section class="thanks">
+      <div class="container narrow">
+        <svg class="doodle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><circle cx="52" cy="58" r="30" class="fill-tomato"/><circle cx="48" cy="55" r="30" class="line"/><path class="fill-olive" d="M36 28 L48 32 L60 26 L54 36 L48 34 L42 36 Z"/><path class="line" d="M36 28 L48 32 L60 26 M48 32 L48 20"/><path class="line line--thin" d="M30 50 C 32 42, 38 38, 44 36"/></g></svg>
+        <h1>Oops, that page isn't here</h1>
+        <p>It may have moved, or the link might have a typo. Let's get you back to the good stuff.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="index.html">Back to home</a><a class="btn btn--ghost" href="menu.html">See this week's menu</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer comes from js/site.js -->
+  <div id="site-footer"></div>
+
+  <script src="/js/site.js"></script>
+</body>
+</html>
