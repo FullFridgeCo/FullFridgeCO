@@ -72,7 +72,7 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
    - The Substack embed (`from-the-kitchen.html`)
    - The Tally embed (`order.html`)
    - The sample menu (`menu.html`)
-6. **Set up the domain:** if Jordyn gets one (for example fullfridgeco.com), connect it in Netlify under Domain management. If it isn't `fullfridgeco.com`, replace that address everywhere: canonical tags, og tags, `sitemap.xml`, and `robots.txt`.
+6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
 7. **Go public:** the Netlify project is set to Private. When the site is ready, Jordyn clicks **Make public** in Netlify.
 
 ## Contact
