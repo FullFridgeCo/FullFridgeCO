@@ -11,7 +11,7 @@
 (function () {
   /* ---------- EDIT ME: your links and contact info ---------- */
   var SITE = {
-    email: "hello@fullfridgeco.com", // EDIT ME: your email
+    email: "fullfridgeco@gmail.com", // EDIT ME: your email
     substackUrl: "https://fullfridgeco.substack.com", // EDIT ME: your Substack
     googleReviewUrl: "#", // EDIT ME: your Google review link
     serviceArea: "Arvada, Colorado, and about 30 minutes around it"
