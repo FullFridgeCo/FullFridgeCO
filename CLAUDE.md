@@ -56,16 +56,14 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 ## Still to do
 
-Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed.
+Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved.
 
 1. **Links still missing:**
    - Google review link (top of `js/site.js`). The footer link is hidden while it's empty.
    - Square payment link for Care Packages. Until then the site says Jordyn will email a payment link. Search `PAYMENT` in `thanks-gift.html` and `care-packages.html` to switch it back.
-2. **Free call length:** the site says "15-minute call" but the Calendly link is the `30min` event. Get Jordyn's choice and make them match.
-3. **Fill in the missing prices:** soup by the quart, snack box, and dessert (`menu.html`), plus the dinner party guest minimum (search `[X] guest minimum`).
-4. **Still waiting on Jordyn:**
-   - Food safety FAQ answer, and adding a food handler certification once Jordyn has one
-   - The referral perk wording (banner in `js/site.js`, answer in `faq.html#referrals`)
+2. **Free call:** the site says 15 minutes. Jordyn is changing the Calendly event to match. If the Calendly link changes, update it in `get-started.html`.
+3. **Food handler card:** Jordyn is taking the ServSafe Food Handler course. Once done, add it to the food safety answer in `faq.html`. Keep the current answer until then.
+4. **Insurance:** Jordyn is looking into personal chef liability insurance. Nothing on the site yet.
 5. **Replace placeholder content:**
    - The About story (`about.html`)
    - Testimonials (`index.html`)
