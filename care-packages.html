@@ -92,7 +92,7 @@
       <div class="container narrow">
         <div class="section-head">
           <h2 id="gift-title">Gift a Care Package</h2>
-          <p>Tell me a little about you and the person you're gifting. After you send this, you'll see a button to pay. Then I'll reach out to them to set up a day.</p>
+          <p>Tell me a little about you and the person you're gifting. After you send this, I'll email you a link to pay. Then I'll reach out to them to set up a day.</p>
         </div>
 
         <form name="care-package-gift" method="POST" action="/thanks-gift.html" data-netlify="true" netlify-honeypot="bot-field">
@@ -183,13 +183,17 @@
           </section>
 
           <div class="form-submit">
-            <button class="btn btn--primary" type="submit">Send, then pay</button>
+            <button class="btn btn--primary" type="submit">Send my Care Package details</button>
             <!-- PRICE: Care Package -->
-            <p>Next you'll see a button to pay the $395 through Square.</p>
+            <!-- PAYMENT: once you have a Square payment link, change this to:
+                 "Next you'll see a button to pay the $395 through Square." -->
+            <p>I'll email you a link to pay the $395 within 24 hours.</p>
           </div>
         </form>
 
+        <!-- PAYMENT: once you have a Square payment link, put it in the href and remove the comment marks around this line.
         <p class="fine" style="text-align:center;margin-top:2rem">Already sent the form? <a href="#">Pay for your Care Package here</a>.</p>
+        -->
       </div>
     </section>
 
