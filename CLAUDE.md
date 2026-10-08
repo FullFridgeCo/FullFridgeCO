@@ -67,7 +67,7 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
 4. **Insurance:** Jordyn is looking into personal chef liability insurance. Nothing on the site yet.
 5. **Replace placeholder content:**
    - Testimonials (`index.html`)
-   - Food photos and a photo of Jordyn
+   - Food photos: the 3 spots on `index.html` (fridge shelf, plated dinner, cooking) and the 2 on `classes-and-parties.html`. Photos of Jordyn are in `images/photos/`: the coconut cake photo on the home page and About page, plus two snapshots on About (Ty and Jordyn making dumplings, and "My first kitchen job"). Jordyn chose not to use a photo of her baking with two kids.
    - The 3 featured Substack posts
    - The Substack embed (`from-the-kitchen.html`)
 6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
