@@ -12,8 +12,8 @@
   /* ---------- EDIT ME: your links and contact info ---------- */
   var SITE = {
     email: "fullfridgeco@gmail.com", // EDIT ME: your email
-    substackUrl: "https://fullfridgeco.substack.com", // EDIT ME: your Substack
-    googleReviewUrl: "#", // EDIT ME: your Google review link
+    substackUrl: "https://jordynmoody.substack.com", // EDIT ME: your Substack
+    googleReviewUrl: "", // EDIT ME: your Google review link. Leave it empty ("") to hide the link.
     serviceArea: "Arvada, Colorado, and about 30 minutes around it"
   };
 
@@ -81,7 +81,8 @@
     "<ul>" +
     '<li><a href="mailto:' + SITE.email + '">' + SITE.email + "</a></li>" +
     '<li><a href="' + SITE.substackUrl + '">Read my Substack</a></li>' +
-    '<li><a href="' + SITE.googleReviewUrl + '">Leave a Google review</a></li>' +
+    // The review link only shows once googleReviewUrl is filled in above
+    (SITE.googleReviewUrl ? '<li><a href="' + SITE.googleReviewUrl + '">Leave a Google review</a></li>' : "") +
     '<li><a href="get-started.html">Book a free call</a></li>' +
     "</ul>" +
     "</div>" +

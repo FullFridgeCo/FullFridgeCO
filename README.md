@@ -101,9 +101,9 @@ Search `EDIT ME`, or check this list:
 
 | What | Where |
 | --- | --- |
-| Email, Substack, Google review link | Top of `js/site.js` |
+| Email, Substack, Google review link | Top of `js/site.js`. The Google review link stays hidden until you fill it in. |
 | Scheduling link for the free call | `get-started.html`, the "Book a free 15-minute call" button |
-| Square payment link for Care Packages | `thanks-gift.html` ("Pay now" button) and the "Pay for your Care Package here" link near the bottom of `care-packages.html` |
+| Square payment link for Care Packages | For now, the site says you'll email a payment link. When you have a Square link, search `PAYMENT` in `thanks-gift.html` and `care-packages.html` and follow the notes there. |
 | Substack embed | `from-the-kitchen.html`. Replace the dashed box. Instructions are in the comment above it. |
 | 3 featured Substack posts | `from-the-kitchen.html`. Look for the `POST` comments. |
 | Tally order form | `order.html`. Replace the dashed box. Instructions are in the comment above it. |
@@ -122,7 +122,7 @@ The site has three forms: the intake form (`get-started.html`), the Care Package
 
 ## Deploying to Netlify (one-time setup)
 
-The code lives on GitHub at `allchefswelcome-del/FullFridgeCO`.
+The code lives on GitHub at `FullFridgeCo/FullFridgeCO`.
 
 1. **Make a `main` branch.** Right now the site lives on the branch `claude/inspiring-meitner-hd1wu6`, and the repo doesn't have a `main` branch yet. On GitHub, click the branch dropdown, type `main`, and choose **Create branch: main from claude/inspiring-meitner-hd1wu6**. Then go to **Settings > General > Default branch** and set it to `main`. (Claude can do this for you if you ask.)
 2. **Create a free Netlify account** at [netlify.com](https://www.netlify.com/), and sign up with GitHub.
