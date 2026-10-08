@@ -1,0 +1,52 @@
+# =========================================================
+# THIS WEEK'S MENU
+# ---------------------------------------------------------
+# This one file runs BOTH your menu page (menu.html) and your
+# order form (order.html). Change it here and both update.
+#
+# How it works:
+#   - Lines that start with # are notes for you. The website ignores them.
+#   - "== Name | price" starts a new section, like Breakfasts.
+#     The price is what every dish in that section costs.
+#   - Every other line is one dish, with parts split by a | line:
+#       Name | Description | Tags | Ingredients | Price (optional)
+#   - Tags can be GF (made without gluten), V (vegetarian), and NF (nut-free).
+#     Separate them with commas, or leave that part empty.
+#   - Only give a dish its own price if it's different from its section.
+#     Write the number first, like "18 per quart".
+#     For two sizes, separate them with a comma: "16 for six, 25 for a dozen".
+#     A price that doesn't start with a number (like "Half the adult price")
+#     shows on the menu, but it can't be ordered on the form.
+#
+# Each week: change the date, then type over the dishes.
+# PRICE: meal prices are on the "==" lines. Add-on prices are at the end of each add-on line.
+# =========================================================
+
+Week of: [Month Day]
+
+# The code clients type to open the order form. Change it anytime.
+Client code: FULLFRIDGE
+
+== Breakfasts | 11 per serving
+Sweet potato and sausage egg bites | Fluffy egg bites with roasted sweet potato, chicken sausage, spinach, and a little cheddar. | GF, NF | Eggs, sweet potato, chicken sausage, spinach, cheddar, olive oil, salt, pepper.
+Berry and cinnamon overnight oats | Creamy oats that are ready the second you open the fridge. Sweetened with a little maple. | V, NF | Rolled oats, milk, Greek yogurt, chia seeds, maple syrup, cinnamon, vanilla, mixed berries, salt.
+Green chile breakfast burritos | Scrambled eggs, crispy potatoes, black beans, and roasted green chile, all wrapped up and ready to warm. | V, NF | Flour tortillas, eggs, potatoes, black beans, roasted green chile, Monterey Jack, onion, olive oil, cumin, salt, pepper.
+
+== Lunches | 14 per serving
+Lemon herb chicken grain bowls | Juicy chicken over farro with cucumber, tomatoes, feta, and a bright lemon herb dressing. | NF | Chicken thighs, farro, cucumber, cherry tomatoes, feta, red onion, parsley, dill, lemon, olive oil, garlic, salt, pepper.
+Greek chickpea salad | A crunchy, filling salad with chickpeas, olives, peppers, and feta. It holds up beautifully all week. | GF, V, NF | Chickpeas, cucumber, bell pepper, kalamata olives, red onion, feta, romaine, red wine vinegar, olive oil, oregano, salt, pepper.
+Turkey and white bean chili | Cozy and mild, with a squeeze of lime and a little cheddar on the side. | GF, NF | Ground turkey, cannellini beans, onion, poblano pepper, garlic, chicken broth, cumin, oregano, lime, cheddar, salt.
+Sesame peanut noodle salad | Cold noodles with crunchy veggies and edamame in a sesame peanut sauce. | V | Spaghetti, peanut butter, peanuts, soy sauce, sesame oil, rice vinegar, honey, ginger, garlic, edamame, carrots, red cabbage, green onion, cilantro.
+
+== Dinners | 18 per serving
+Braised short ribs with mashed potatoes | Slow-cooked until tender, with creamy mashed potatoes and honey roasted carrots. | GF, NF | Beef short ribs, red wine, beef broth, tomato paste, onion, carrots, garlic, thyme, Yukon gold potatoes, butter, cream, honey, salt, pepper.
+Chicken enchiladas verdes | Corn tortillas filled with shredded chicken and baked in tangy salsa verde. Served with cilantro lime rice. | GF, NF | Chicken, corn tortillas, tomatillos, jalapeño, onion, garlic, cilantro, Monterey Jack, sour cream, white rice, lime, salt.
+Pesto pasta with roasted vegetables | Basil pesto, roasted zucchini and peppers, and a ball of fresh burrata to tear over the top. | V | Penne, basil, pine nuts, parmesan, olive oil, garlic, zucchini, red bell pepper, cherry tomatoes, burrata, lemon, salt, pepper.
+Honey garlic salmon | Glazed salmon with jasmine rice and crisp garlicky green beans. | GF, NF | Salmon, honey, tamari (gluten-free soy sauce), garlic, ginger, jasmine rice, green beans, olive oil, sesame seeds, salt, pepper.
+Mushroom and spinach lasagna | Layers of ricotta, spinach, and roasted mushrooms in a creamy sauce. Great for a cold night. | V, NF | Lasagna noodles, ricotta, mozzarella, parmesan, cremini mushrooms, spinach, egg, milk, butter, flour, garlic, nutmeg, salt, pepper.
+
+== Add-ons
+Soup by the quart | This week: roasted tomato basil soup. One quart feeds about two people. | GF, V, NF | Tomatoes, onion, garlic, vegetable broth, basil, cream, olive oil, salt, pepper. | 18 per quart
+Snack box | A little box of grab-and-go snacks for the week. Think cut veggies, hummus, cheese, and fruit. | GF, V, NF | Carrots, cucumber, snap peas, hummus (chickpeas, tahini, lemon, garlic), cheddar, grapes, apple. | 25 per box
+Dessert | Brown butter chocolate chip cookies. They freeze well, if they last that long. | V, NF | Flour, butter, brown sugar, sugar, eggs, vanilla, baking soda, chocolate chips, flaky salt. | 16 for six, 25 for a dozen
+Kid portion | A smaller, simpler version of any meal on the menu. Sauce on the side if you'd like. | | Same as the meal you choose. | Half the adult price

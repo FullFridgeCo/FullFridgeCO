@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Received | Full Fridge Co.</title>
+  <meta name="description" content="Your weekly order is in.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://fullfridgeco.com/thanks-order.html">
+
+  <!-- Social share preview (Facebook, iMessage, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Full Fridge Co.">
+  <meta property="og:title" content="Order Received | Full Fridge Co.">
+  <meta property="og:description" content="Your weekly order is in.">
+  <meta property="og:image" content="https://fullfridgeco.com/images/social-share.png">
+  <meta property="og:url" content="https://fullfridgeco.com/thanks-order.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fbf6ea">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..700,100;1,9..144,500,100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- The sketchy pencil effect for all the drawings. Keep this on every page. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="sketchy" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and referral banner come from js/site.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <section class="thanks">
+      <div class="container narrow">
+        <svg class="doodle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><rect x="26" y="10" width="50" height="82" rx="7" class="fill-mustard"/><rect x="22" y="6" width="50" height="82" rx="7" class="line"/><path class="line" d="M22 34 L72 34 M30 14 L30 26 M30 42 L30 58"/><path class="line" d="M28 88 L28 94 M66 88 L66 94"/></g></svg>
+        <h1>Got it, thank you!</h1>
+        <p>Your order is in. If anything changes before Friday at noon, just send a new one or text me. See you on your cook day!</p>
+        <div class="btn-row"><a class="btn btn--ghost" href="kitchen-ready.html">Get your kitchen ready</a><a class="btn btn--ghost" href="menu.html">See this week's menu</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer comes from js/site.js -->
+  <div id="site-footer"></div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

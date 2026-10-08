@@ -55,18 +55,129 @@
 
     <section class="section section--tint" aria-label="Weekly order form">
       <div class="container narrow">
+
         <!-- =========================================================
-             TALLY ORDER FORM: replace this placeholder box with your
-             Tally embed code. In Tally, open your form, click Share,
-             choose Embed, and copy the code. It looks something like:
-             <iframe data-tally-src="https://tally.so/embed/YOURFORMID?alignLeft=1&hideTitle=1&transparentBackground=1"
-               loading="lazy" width="100%" height="800" frameborder="0" title="Weekly order"></iframe>
-             <script src="https://tally.so/widgets/embed.js"></script>
+             The dishes on this page come from menu.txt.
+             Edit menu.txt each week, not this page.
+             The client code is in menu.txt too.
              ========================================================= -->
-        <div class="embed-slot">
-          <strong>Tally order form goes here</strong>
-          <p>Paste your Tally embed code in this spot.</p>
+
+        <noscript>
+          <div class="panel" style="text-align:center"><p>This order form needs JavaScript turned on. You can always text me your order instead.</p></div>
+        </noscript>
+
+        <!-- Clients only: the code check. Clients who tap the link you text them skip this. -->
+        <div id="order-gate" class="is-hidden">
+          <form id="gate-form" class="form-section gate" novalidate>
+            <div class="form-section__head">
+              <span class="form-section__num" aria-hidden="true">&#9733;</span>
+              <div>
+                <h2>Clients, welcome back</h2>
+                <p>Type the client code I gave you to open this week's order form.</p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="client-code">Client code</label>
+              <input type="text" id="client-code" autocomplete="off" autocapitalize="characters" spellcheck="false">
+            </div>
+            <div class="form-submit" style="text-align:left;margin-top:0">
+              <button class="btn btn--primary" type="submit">Open the order form</button>
+            </div>
+            <div id="gate-wrong" class="gate__wrong is-hidden" role="alert">
+              <p><strong>Hmm, that code doesn't match.</strong> Double-check it, or text me and I'll send it again.</p>
+              <p>New here? I'd love to cook for you. Let's start with a free call.</p>
+              <a class="btn btn--ghost" href="get-started.html">Book a free call</a>
+            </div>
+          </form>
         </div>
+
+        <div id="order-form-wrap" class="is-hidden">
+          <form id="order-form" name="weekly-order" method="POST" action="/thanks-order.html" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="weekly-order">
+            <p class="honeypot"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <!-- These get filled in for you, so your email shows the order and total -->
+            <input type="hidden" name="week_of" value="">
+            <input type="hidden" name="order_summary" value="">
+            <input type="hidden" name="estimated_total" value="">
+
+            <section class="form-section" aria-labelledby="who-title">
+              <div class="form-section__head">
+                <span class="form-section__num" aria-hidden="true">1</span>
+                <div>
+                  <h2 id="who-title">Hi again!</h2>
+                  <p>This is for the week of <strong data-week-of></strong>.</p>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="client_name">Your name</label>
+                  <input type="text" id="client_name" name="client_name" required autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="client_contact">Your email or phone</label>
+                  <input type="text" id="client_contact" name="client_contact" required autocomplete="email">
+                </div>
+              </div>
+              <fieldset class="field">
+                <legend>This week I'd like to...</legend>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="week_choice" value="Pick my meals" required> Pick my meals</label>
+                  <label class="choice"><input type="radio" name="week_choice" value="Chef's Picks"> Chef's Picks, please</label>
+                  <label class="choice"><input type="radio" name="week_choice" value="Skip this week"> Skip this week</label>
+                </div>
+              </fieldset>
+            </section>
+
+            <section class="form-section" aria-labelledby="picks-title" data-show-if="week_choice=Pick my meals">
+              <div class="form-section__head">
+                <span class="form-section__num" aria-hidden="true">2</span>
+                <div>
+                  <h2 id="picks-title">Pick your meals</h2>
+                  <p>Tap + to add servings. Your total adds up at the bottom as you go.</p>
+                </div>
+              </div>
+
+              <div id="order-picks"></div>
+
+              <div class="field" style="margin-top:2rem">
+                <label for="kid_portions">Kid portions <span class="optional">(optional)</span></label>
+                <!-- PRICE: Kid portion is half price -->
+                <span class="hint" id="kid_portions-hint">Which meals, and how many? Kid portions are half price and aren't in the total below.</span>
+                <textarea id="kid_portions" name="kid_portions" aria-describedby="kid_portions-hint" style="min-height:80px"></textarea>
+              </div>
+
+              <div id="order-error" class="order-error is-hidden" role="alert">Pick at least one meal, or choose Chef's Picks or Skip this week up top.</div>
+
+              <div id="order-total" class="order-total is-hidden" aria-live="polite">
+                <div class="order-total__row">
+                  <span class="order-total__label">Your total <span id="order-total-count">0 items</span></span>
+                  <span class="order-total__amount" id="order-total-amount">$0</span>
+                </div>
+                <p class="order-total__note" id="order-total-note">Plus groceries at cost.</p>
+              </div>
+            </section>
+
+            <section class="form-section" aria-labelledby="notes-title">
+              <div class="form-section__head">
+                <span class="form-section__num" aria-hidden="true">3</span>
+                <div>
+                  <h2 id="notes-title">Anything else?</h2>
+                  <p>Allergies, a busy night, a change to your cook day, anything at all.</p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="notes">Notes for me <span class="optional">(optional)</span></label>
+                <textarea id="notes" name="notes"></textarea>
+              </div>
+            </section>
+
+            <div class="form-submit">
+              <button class="btn btn--primary" type="submit">Send my order</button>
+              <p>You'll get an itemized grocery receipt after your cook day.</p>
+            </div>
+          </form>
+        </div>
+
       </div>
     </section>
 
@@ -76,5 +187,7 @@
   <div id="site-footer"></div>
 
   <script src="js/site.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 </html>

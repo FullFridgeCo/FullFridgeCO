@@ -34,17 +34,18 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 - Plain static HTML and CSS, with a little vanilla JS. No frameworks and no build step. Jordyn edits the files by hand, so keep the code simple and well commented.
 - **Hosting:** Netlify project `fullfridgewebsite` (https://fullfridgewebsite.netlify.app), deployed from the `main` branch of GitHub repo `FullFridgeCo/FullFridgeCO`. A push to `main` goes live in about a minute.
-- **Forms:** Netlify Forms (`intake`, `care-package-gift`, `class-party-inquiry`). Each has `data-netlify="true"`, a hidden `form-name` input, a honeypot `bot-field`, and its own thank-you page (`thanks-*.html`). Form detection is on, and submission emails go to Jordyn.
+- **Forms:** Netlify Forms (`intake`, `care-package-gift`, `class-party-inquiry`, `weekly-order`). Each has `data-netlify="true"`, a hidden `form-name` input, a honeypot `bot-field`, and its own thank-you page (`thanks-*.html`). Form detection is on, and submission emails go to Jordyn.
 - **Shared header, footer, and referral banner:** these all live in `js/site.js`. Contact info is at the top of that file, marked `EDIT ME`.
 - **Conditional and required checkbox questions:** handled by `js/forms.js`, using `data-show-if`, `data-required-if-shown`, and `data-required-group`.
 - **Colors and fonts:** CSS variables at the top of `css/styles.css`. Mustard, olive, and cream. Fraunces for headings, DM Sans for body text.
 - **Illustrations:** hand-drawn style inline SVGs. Every page includes the `#sketchy` SVG filter that gives the lines their wobble. Use no stock photos. Photo spots are dashed `.photo-slot` boxes.
-- **Markers for Jordyn:** prices are marked with `PRICE` comments, links to fill in with `EDIT ME`, and the weekly menu sits between `WEEKLY MENU: START` and `END` in `menu.html`.
+- **Markers for Jordyn:** prices are marked with `PRICE` comments, and links to fill in with `EDIT ME`.
+- **Weekly menu and order form:** the menu lives in `menu.txt` (one plain-text line per dish, explained at the top of the file). `js/menu.js` fetches it and draws both the cards on `menu.html` and the order form on `order.html`. The order form needs the client code from the `Client code:` line in `menu.txt` (currently `FULLFRIDGE`), or a magic link like `order.html?code=FULLFRIDGE`, and it remembers the code in localStorage. It shows a live total and the $250 minimum (`COOK_DAY_MINIMUM` in `js/menu.js`). The dish inputs have no `name`, because Netlify Forms only keeps fields that are in the static HTML. Instead, JS writes a readable summary into the hidden `order_summary` and `estimated_total` fields. When Jordyn sends a new menu, update `menu.txt` only.
 - `README.md` explains all of this for Jordyn. Keep it up to date when you change how something works.
 
 ## Pages
 
-`index.html` (home), `how-it-works.html`, `menu.html`, `pricing.html`, `care-packages.html`, `classes-and-parties.html`, `kitchen-ready.html`, `faq.html`, `about.html`, `from-the-kitchen.html`, `get-started.html` (intake form), `order.html` (the weekly order page with the Tally form, hidden from Google), `thanks-intake.html`, `thanks-gift.html`, `thanks-inquiry.html`, `404.html`. Also `robots.txt`, `sitemap.xml`, `images/favicon.svg`, and `images/social-share.png`.
+`index.html` (home), `how-it-works.html`, `menu.html`, `pricing.html`, `care-packages.html`, `classes-and-parties.html`, `kitchen-ready.html`, `faq.html`, `about.html`, `from-the-kitchen.html`, `get-started.html` (intake form), `order.html` (the weekly order form, hidden from Google), `thanks-intake.html`, `thanks-gift.html`, `thanks-inquiry.html`, `thanks-order.html`, `404.html`. Also `menu.txt` (the weekly menu). Also `robots.txt`, `sitemap.xml`, `images/favicon.svg`, and `images/social-share.png`.
 
 ## Prices (also marked in the code)
 
@@ -56,7 +57,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 ## Still to do
 
-Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`, Square Care Package link (`https://square.link/u/B7BjkRT6`) added to `care-packages.html` and `thanks-gift.html` (search `PAYMENT`).
+Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`, Square Care Package link (`https://square.link/u/B7BjkRT6`) added to `care-packages.html` and `thanks-gift.html` (search `PAYMENT`), weekly order form built on the site (Jordyn chose this over Tally so clients see a live total).
 
 1. **Links still missing:**
    - Google review link (top of `js/site.js`). The footer link is hidden while it's empty.
@@ -68,8 +69,7 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
    - Food photos and a photo of Jordyn
    - The 3 featured Substack posts
    - The Substack embed (`from-the-kitchen.html`)
-   - The Tally embed (`order.html`)
-   - The sample menu (`menu.html`)
+   - The sample menu (`menu.txt`), and the `[Month Day]` on its `Week of:` line
 6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
 7. **Go public:** the Netlify project is set to Private. When the site is ready, Jordyn clicks **Make public** in Netlify.
 
