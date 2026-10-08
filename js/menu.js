@@ -142,7 +142,7 @@
 
   function drawMenu(menu) {
     var html =
-      '<p class="fine" style="text-align:center;margin-bottom:2.5rem">Menu for the week of <strong>' +
+      '<p class="fine menu-week">Menu for the week of <strong>' +
       escapeHtml(menu.weekOf) +
       "</strong></p>";
 

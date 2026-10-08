@@ -2002,3 +2002,17 @@ textarea:focus {
     display: none;
   }
 }
+
+/* Tighter top of the menu page (menu.html) */
+.section--snug .menu-legend {
+  margin-bottom: 1.2rem;
+}
+
+.menu-week {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-hero--compact .order-cta--hero {
+  margin-top: 1.2rem;
+}
