@@ -22,7 +22,7 @@
 # PRICE: meal prices are on the "==" lines. Add-on prices are at the end of each add-on line.
 # =========================================================
 
-Week of: [Month Day]
+Week of: October 26
 
 # The code clients type to open the order form. Change it anytime.
 Client code: FULLFRIDGE

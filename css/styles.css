@@ -1954,3 +1954,51 @@ textarea:focus {
     font-size: 0.82rem;
   }
 }
+
+/* A shorter page top, so the order form shows up sooner (order.html) */
+.page-hero--compact {
+  padding: clamp(1.8rem, 4vw, 2.6rem) 0 clamp(1.4rem, 3vw, 2rem);
+}
+
+.page-hero--compact .lede {
+  margin-bottom: 0;
+}
+
+@media (min-width: 820px) {
+  .page-hero--compact .page-hero__grid {
+    grid-template-columns: 1fr 130px;
+  }
+
+  .page-hero--compact .doodle {
+    width: 120px;
+  }
+}
+
+.section--snug {
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Side-by-side fields line up evenly, even when one is the last in its row */
+.field-row {
+  gap: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.field-row:last-child {
+  margin-bottom: 0;
+}
+
+.field-row > .field {
+  margin-bottom: 0;
+}
+
+/* Choices on their own lines (order.html) */
+.choices--stack {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 819px) {
+  .page-hero--compact .doodle {
+    display: none;
+  }
+}
