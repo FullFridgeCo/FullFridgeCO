@@ -57,7 +57,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 ## Still to do
 
-Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`, Square Care Package link (`https://square.link/u/B7BjkRT6`) added to `care-packages.html` and `thanks-gift.html` (search `PAYMENT`), weekly order form built on the site (Jordyn chose this over Tally so clients see a live total), Jordyn's first real menu added to `menu.txt`, vegetarian tag renamed from V to VEG (Jordyn felt V reads as vegan).
+Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`, Square Care Package link (`https://square.link/u/B7BjkRT6`) added to `care-packages.html` and `thanks-gift.html` (search `PAYMENT`), weekly order form built on the site (Jordyn chose this over Tally so clients see a live total), Jordyn's first real menu (week of October 26) added to `menu.txt`, vegetarian tag renamed from V to VEG (Jordyn felt V reads as vegan).
 
 1. **Links still missing:**
    - Google review link (top of `js/site.js`). The footer link is hidden while it's empty.
@@ -69,7 +69,6 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
    - Food photos and a photo of Jordyn
    - The 3 featured Substack posts
    - The Substack embed (`from-the-kitchen.html`)
-   - The `[Month Day]` on the `Week of:` line in `menu.txt` (Jordyn's real first menu is in)
 6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
 7. **Go public:** the Netlify project is set to Private. When the site is ready, Jordyn clicks **Make public** in Netlify.
 
