@@ -61,7 +61,7 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
 1. **Links still missing:**
    - Google review link (top of `js/site.js`). The footer link is hidden while it's empty.
    - Square payment link for Care Packages. Until then the site says Jordyn will email a payment link. Search `PAYMENT` in `thanks-gift.html` and `care-packages.html` to switch it back.
-2. **Free call:** the site says 15 minutes. Jordyn is changing the Calendly event to match. If the Calendly link changes, update it in `get-started.html`.
+2. **Free call:** done. Jordyn changed the Calendly event to 15 minutes. The link stayed `https://calendly.com/fullfridgeco/30min`, which is already on the site.
 3. **Food handler card:** Jordyn is taking the ServSafe Food Handler course. Once done, add it to the food safety answer in `faq.html`. Keep the current answer until then.
 4. **Insurance:** Jordyn is looking into personal chef liability insurance. Nothing on the site yet.
 5. **Replace placeholder content:**
