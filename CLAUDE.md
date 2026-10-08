@@ -56,7 +56,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 ## Still to do
 
-Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved.
+Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`.
 
 1. **Links still missing:**
    - Google review link (top of `js/site.js`). The footer link is hidden while it's empty.
@@ -65,7 +65,6 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
 3. **Food handler card:** Jordyn is taking the ServSafe Food Handler course. Once done, add it to the food safety answer in `faq.html`. Keep the current answer until then.
 4. **Insurance:** Jordyn is looking into personal chef liability insurance. Nothing on the site yet.
 5. **Replace placeholder content:**
-   - The About story (`about.html`)
    - Testimonials (`index.html`)
    - Food photos and a photo of Jordyn
    - The 3 featured Substack posts
