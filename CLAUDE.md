@@ -51,7 +51,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 - **Weekly meal prep, per serving, plus groceries at cost with an itemized receipt:** Breakfast $11, Lunch $14, Dinner $18. Kid portions are half price.
 - **Weekly meal prep, other terms:** $250 minimum per cook day. Travel is included within 30 minutes of Arvada.
-- **Serving notes in `menu.txt`:** a dish can carry its own price or serving note as a 5th part, like `11 for 2 egg bites` or `30 for a dozen` (muffins, which Jordyn only makes by the dozen; $30 was Claude's suggestion). These show on the menu, the order form, and the email ("2 egg bites each").
+- **Serving notes in `menu.txt`:** a dish can carry its own price or serving note as a 5th part, like `11 for 2 egg bites` or `24 for a dozen` (muffins, which Jordyn only makes by the dozen). These show on the menu, the order form, and the email ("2 egg bites each").
 - **Care Package:** $395 all-in, groceries included.
 - **Date Night Cooking Class:** from $275 per couple, plus groceries.
 - **Dinner Parties:** from $65 per guest, plus groceries.
