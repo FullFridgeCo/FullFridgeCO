@@ -10,7 +10,7 @@
 #     The price is what every dish in that section costs.
 #   - Every other line is one dish, with parts split by a | line:
 #       Name | Description | Tags | Ingredients | Price (optional)
-#   - Tags can be GF (made without gluten), V (vegetarian), and NF (nut-free).
+#   - Tags can be GF (made without gluten), VEG (vegetarian), and NF (nut-free).
 #     Separate them with commas, or leave that part empty.
 #   - Only give a dish its own price if it's different from its section.
 #     Write the number first, like "18 per quart".
@@ -28,25 +28,25 @@ Week of: [Month Day]
 Client code: FULLFRIDGE
 
 == Breakfasts | 11 per serving
-Sweet potato and sausage egg bites | Fluffy egg bites with roasted sweet potato, chicken sausage, spinach, and a little cheddar. | GF, NF | Eggs, sweet potato, chicken sausage, spinach, cheddar, olive oil, salt, pepper.
-Berry and cinnamon overnight oats | Creamy oats that are ready the second you open the fridge. Sweetened with a little maple. | V, NF | Rolled oats, milk, Greek yogurt, chia seeds, maple syrup, cinnamon, vanilla, mixed berries, salt.
-Green chile breakfast burritos | Scrambled eggs, crispy potatoes, black beans, and roasted green chile, all wrapped up and ready to warm. | V, NF | Flour tortillas, eggs, potatoes, black beans, roasted green chile, Monterey Jack, onion, olive oil, cumin, salt, pepper.
+Sweet potato and sausage egg bites | Fluffy egg bites with roasted sweet potato and savory sausage. Easy to grab on a busy morning. | GF, NF | Eggs, sweet potato, breakfast sausage, spinach, cheddar, salt, pepper.
+Berry and cinnamon overnight oats | Creamy oats with mixed berries and a little cinnamon. Ready to eat straight from the fridge. | GF, VEG, NF | Rolled oats (gluten-free), milk, Greek yogurt, chia seeds, mixed berries, cinnamon, maple syrup.
+Blueberry crumble muffins | Soft blueberry muffins with a buttery cinnamon crumble on top. | VEG, NF | Flour, butter, sugar, brown sugar, eggs, buttermilk, blueberries, vanilla, cinnamon, baking powder, salt.
 
 == Lunches | 14 per serving
-Lemon herb chicken grain bowls | Juicy chicken over farro with cucumber, tomatoes, feta, and a bright lemon herb dressing. | NF | Chicken thighs, farro, cucumber, cherry tomatoes, feta, red onion, parsley, dill, lemon, olive oil, garlic, salt, pepper.
-Greek chickpea salad | A crunchy, filling salad with chickpeas, olives, peppers, and feta. It holds up beautifully all week. | GF, V, NF | Chickpeas, cucumber, bell pepper, kalamata olives, red onion, feta, romaine, red wine vinegar, olive oil, oregano, salt, pepper.
-Turkey and white bean chili | Cozy and mild, with a squeeze of lime and a little cheddar on the side. | GF, NF | Ground turkey, cannellini beans, onion, poblano pepper, garlic, chicken broth, cumin, oregano, lime, cheddar, salt.
-Sesame peanut noodle salad | Cold noodles with crunchy veggies and edamame in a sesame peanut sauce. | V | Spaghetti, peanut butter, peanuts, soy sauce, sesame oil, rice vinegar, honey, ginger, garlic, edamame, carrots, red cabbage, green onion, cilantro.
+Lemon herb chicken grain bowls | Lemony chicken over quinoa with crunchy veggies and feta. | GF, NF | Chicken, quinoa, cucumber, cherry tomatoes, feta, parsley, lemon, garlic, olive oil, salt, pepper.
+Greek chickpea salad | A bright, filling salad that holds up all week. | GF, VEG, NF | Chickpeas, cucumber, cherry tomatoes, red onion, kalamata olives, feta, oregano, red wine vinegar, olive oil.
+Turkey and white bean chili | A cozy, mild chili with tender white beans and green chiles. | GF, NF | Ground turkey, white beans, onion, garlic, green chiles, cumin, chicken broth, salt, pepper.
+Sesame peanut noodle salad | Cold noodles in a creamy peanut sauce with lots of crunchy veggies. | GF, VEG | Rice noodles, peanut butter, tamari (gluten-free soy sauce), sesame oil, rice vinegar, honey, cabbage, carrots, cucumber, edamame, cilantro.
 
 == Dinners | 18 per serving
-Braised short ribs with mashed potatoes | Slow-cooked until tender, with creamy mashed potatoes and honey roasted carrots. | GF, NF | Beef short ribs, red wine, beef broth, tomato paste, onion, carrots, garlic, thyme, Yukon gold potatoes, butter, cream, honey, salt, pepper.
-Chicken enchiladas verdes | Corn tortillas filled with shredded chicken and baked in tangy salsa verde. Served with cilantro lime rice. | GF, NF | Chicken, corn tortillas, tomatillos, jalapeño, onion, garlic, cilantro, Monterey Jack, sour cream, white rice, lime, salt.
-Pesto pasta with roasted vegetables | Basil pesto, roasted zucchini and peppers, and a ball of fresh burrata to tear over the top. | V | Penne, basil, pine nuts, parmesan, olive oil, garlic, zucchini, red bell pepper, cherry tomatoes, burrata, lemon, salt, pepper.
+Braised short ribs with mashed potatoes | Slow-cooked short ribs that fall apart, over creamy mashed potatoes. | GF, NF | Beef short ribs, red wine, beef broth, onion, carrots, garlic, thyme, potatoes, butter, cream, salt, pepper.
+Chicken enchiladas verdes | Corn tortillas filled with chicken, topped with salsa verde and melty cheese. | GF, NF | Chicken, corn tortillas, salsa verde, sour cream, Monterey Jack, onion, cilantro.
+Pesto pasta with roasted vegetables | Pasta tossed in basil pesto with a pan of roasted summer veggies. | VEG | Pasta, basil, pine nuts, parmesan, garlic, olive oil, zucchini, cherry tomatoes, bell peppers.
 Honey garlic salmon | Glazed salmon with jasmine rice and crisp garlicky green beans. | GF, NF | Salmon, honey, tamari (gluten-free soy sauce), garlic, ginger, jasmine rice, green beans, olive oil, sesame seeds, salt, pepper.
-Mushroom and spinach lasagna | Layers of ricotta, spinach, and roasted mushrooms in a creamy sauce. Great for a cold night. | V, NF | Lasagna noodles, ricotta, mozzarella, parmesan, cremini mushrooms, spinach, egg, milk, butter, flour, garlic, nutmeg, salt, pepper.
+Mushroom and spinach lasagna | Layers of mushrooms, spinach, and three cheeses in a rich tomato sauce. | VEG, NF | Lasagna noodles, mushrooms, spinach, ricotta, mozzarella, parmesan, marinara, garlic, olive oil.
 
 == Add-ons
-Soup by the quart | This week: roasted tomato basil soup. One quart feeds about two people. | GF, V, NF | Tomatoes, onion, garlic, vegetable broth, basil, cream, olive oil, salt, pepper. | 18 per quart
-Snack box | A little box of grab-and-go snacks for the week. Think cut veggies, hummus, cheese, and fruit. | GF, V, NF | Carrots, cucumber, snap peas, hummus (chickpeas, tahini, lemon, garlic), cheddar, grapes, apple. | 25 per box
-Dessert | Brown butter chocolate chip cookies. They freeze well, if they last that long. | V, NF | Flour, butter, brown sugar, sugar, eggs, vanilla, baking soda, chocolate chips, flaky salt. | 16 for six, 25 for a dozen
+Roasted tomato basil soup | Smooth, comforting tomato soup made with roasted tomatoes and fresh basil. | GF, VEG, NF | Tomatoes, onion, garlic, basil, vegetable broth, cream, olive oil, salt, pepper. | 18 per quart
+Snack box | A box of easy snacks for the week. | GF, VEG, NF | Cut veggies, hummus, cheese, fruit. | 25 per box
+Brown butter chocolate chip cookies | Chewy cookies with nutty brown butter and plenty of chocolate. | VEG, NF | Flour, butter, brown sugar, sugar, eggs, vanilla, chocolate chips, baking soda, salt. | 16 for six, 25 for a dozen
 Kid portion | A smaller, simpler version of any meal on the menu. Sauce on the side if you'd like. | | Same as the meal you choose. | Half the adult price

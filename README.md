@@ -67,7 +67,7 @@ Everything for the week lives in one file: **`menu.txt`**. Your menu page and yo
 Honey garlic salmon | Glazed salmon with jasmine rice and green beans. | GF, NF | Salmon, honey, tamari, garlic, ...
 ```
 
-   That's the name, the description, the tags (GF, V, NF), and the ingredients.
+   That's the name, the description, the tags (GF, VEG, NF), and the ingredients.
 
 5. To add a dish, add a new line under its section. To remove one, delete its line.
 6. Click **Commit changes**. The site updates in about a minute.

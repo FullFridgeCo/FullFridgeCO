@@ -15,7 +15,8 @@
   // PRICE: the minimum for one cook day
   var COOK_DAY_MINIMUM = 250;
 
-  var TAG_NAMES = { GF: "gf", V: "v", NF: "nf" };
+  // Tag text and the CSS class that colors it. VEG means vegetarian.
+  var TAG_NAMES = { GF: "gf", VEG: "v", NF: "nf" };
 
   /* ---------- Small helpers ---------- */
 
@@ -91,7 +92,8 @@
         tags: (parts[2] || "")
           .split(",")
           .map(function (t) {
-            return t.trim().toUpperCase();
+            t = t.trim().toUpperCase();
+            return t === "V" ? "VEG" : t; // an old-style "V" still works
           })
           .filter(function (t) {
             return TAG_NAMES[t];
