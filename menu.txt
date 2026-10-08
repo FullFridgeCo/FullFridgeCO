@@ -12,8 +12,9 @@
 #       Name | Description | Tags | Ingredients | Price (optional)
 #   - Tags can be GF (made without gluten), VEG (vegetarian), and NF (nut-free).
 #     Separate them with commas, or leave that part empty.
-#   - Only give a dish its own price if it's different from its section.
-#     Write the number first, like "18 per quart".
+#   - Give a dish its own price if it's different from its section, or to say
+#     what one serving is. Write the number first, like "11 for 2 egg bites"
+#     or "18 per quart". It shows on the menu, the order form, and your email.
 #     For two sizes, separate them with a comma: "16 for six, 25 for a dozen".
 #     A price that doesn't start with a number (like "Half the adult price")
 #     shows on the menu, but it can't be ordered on the form.
@@ -28,9 +29,9 @@ Week of: October 26
 Client code: FULLFRIDGE
 
 == Breakfasts | 11 per serving
-Sweet potato and sausage egg bites | Fluffy egg bites with roasted sweet potato and savory sausage. Easy to grab on a busy morning. | GF, NF | Eggs, sweet potato, breakfast sausage, spinach, cheddar, salt, pepper.
+Sweet potato and sausage egg bites | Fluffy egg bites with roasted sweet potato and savory sausage. Easy to grab on a busy morning. | GF, NF | Eggs, sweet potato, breakfast sausage, spinach, cheddar, salt, pepper. | 11 for 2 egg bites
 Berry and cinnamon overnight oats | Creamy oats with mixed berries and a little cinnamon. Ready to eat straight from the fridge. | GF, VEG, NF | Rolled oats (gluten-free), milk, Greek yogurt, chia seeds, mixed berries, cinnamon, maple syrup.
-Blueberry crumble muffins | Soft blueberry muffins with a buttery cinnamon crumble on top. | VEG, NF | Flour, butter, sugar, brown sugar, eggs, buttermilk, blueberries, vanilla, cinnamon, baking powder, salt.
+Blueberry crumble muffins | Soft blueberry muffins with a buttery cinnamon crumble on top. | VEG, NF | Flour, butter, sugar, brown sugar, eggs, buttermilk, blueberries, vanilla, cinnamon, baking powder, salt. | 30 for a dozen
 
 == Lunches | 14 per serving
 Lemon herb chicken grain bowls | Lemony chicken over quinoa with crunchy veggies and feta. | GF, NF | Chicken, quinoa, cucumber, cherry tomatoes, feta, parsley, lemon, garlic, olive oil, salt, pepper.

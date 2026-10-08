@@ -119,7 +119,8 @@
           }),
         ingredients: parts[3] || "",
         options: options,
-        priceNote: options.length ? "" : ownPrice
+        priceNote: options.length ? "" : ownPrice,
+        hasOwnPrice: Boolean(parts[4]) // a meal with its own price or serving note, like "11 for 2 egg bites"
       });
     });
 
@@ -162,7 +163,7 @@
           "</h3><p>" +
           escapeHtml(item.description) +
           "</p>" +
-          (isMeal ? "" : '<p class="menu-item__price">' + escapeHtml(priceText(item)) + "</p>") +
+          (isMeal && !item.hasOwnPrice ? "" : '<p class="menu-item__price">' + escapeHtml(priceText(item)) + "</p>") +
           tagsHtml(item.tags) +
           (item.ingredients
             ? '<details class="ingredients"><summary>Ingredients</summary><p>' +
@@ -203,9 +204,11 @@
         item.options.forEach(function (option) {
           var i = rows.length;
           var name = item.options.length > 1 ? item.name + ", " + option.label : item.name;
-          rows.push({ section: section.name, name: name, price: option.price });
+          // "for 2 egg bites" becomes "2 egg bites each" in your order email
+          var each = item.options.length === 1 && /^for /i.test(option.label) ? option.label.replace(/^for /i, "") + " each" : "";
+          rows.push({ section: section.name, name: name, price: option.price, each: each });
 
-          var showPrice = !sectionPrice || item.options.length > 1 || option.price !== sectionPrice.price;
+          var showPrice = !sectionPrice || item.hasOwnPrice || item.options.length > 1 || option.price !== sectionPrice.price;
           html +=
             '<div class="order-row">' +
             '<div class="order-row__info"><label for="dish-' + i + '">' + escapeHtml(name) + "</label>" +
@@ -260,7 +263,7 @@
           lines.push(sectionEmoji(row.section) + " " + boldText(row.section.toUpperCase()));
           lastSection = row.section;
         }
-        lines.push(boldText(qty + " ×") + "  " + row.name + "  (" + money(qty * row.price) + ")");
+        lines.push(boldText(qty + " ×") + "  " + row.name + (row.each ? ", " + row.each : "") + "  (" + money(qty * row.price) + ")");
         total += qty * row.price;
         count += qty;
       });
