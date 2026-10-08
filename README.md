@@ -103,7 +103,7 @@ Search `EDIT ME`, or check this list:
 | --- | --- |
 | Email, Substack, Google review link | Top of `js/site.js`. The Google review link stays hidden until you fill it in. |
 | Scheduling link for the free call | `get-started.html`, the "Book a free 15-minute call" button |
-| Square payment link for Care Packages | For now, the site says you'll email a payment link. When you have a Square link, search `PAYMENT` in `thanks-gift.html` and `care-packages.html` and follow the notes there. |
+| Square payment link for Care Packages | Search `PAYMENT` in `thanks-gift.html` and `care-packages.html`. It's in both places. |
 | Substack embed | `from-the-kitchen.html`. Replace the dashed box. Instructions are in the comment above it. |
 | 3 featured Substack posts | `from-the-kitchen.html`. Look for the `POST` comments. |
 | Tally order form | `order.html`. Replace the dashed box. Instructions are in the comment above it. |
