@@ -95,10 +95,6 @@
           <form id="order-form" name="weekly-order" method="POST" action="/thanks-order.html" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="weekly-order">
             <p class="honeypot"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-            <!-- These get filled in for you, so your email shows the order and total -->
-            <input type="hidden" name="week_of" value="">
-            <input type="hidden" name="order_summary" value="">
-            <input type="hidden" name="estimated_total" value="">
 
             <section class="form-section" aria-labelledby="who-title">
               <div class="form-section__head">
@@ -126,6 +122,9 @@
                   <label class="choice"><input type="radio" name="week_choice" value="Skip this week"> Skip this week</label>
                 </div>
               </fieldset>
+              <!-- Filled in for you as they pick. Your order email shows it right
+                   under their name, with the total at the bottom. -->
+              <input type="hidden" name="your_order" value="">
             </section>
 
             <section class="form-section" aria-labelledby="picks-title" data-show-if="week_choice=Pick my meals">
@@ -170,6 +169,10 @@
                 <textarea id="notes" name="notes"></textarea>
               </div>
             </section>
+
+            <!-- Also filled in for you. "subject" becomes your email's subject line. -->
+            <input type="hidden" name="week_of" value="">
+            <input type="hidden" name="subject" data-remove-prefix value="New weekly order">
 
             <div class="form-submit">
               <button class="btn btn--primary" type="submit">Send my order</button>

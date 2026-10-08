@@ -82,7 +82,7 @@ There are more notes at the top of `menu.txt`, including how add-on prices work.
 
 - **The client code** is in `menu.txt`, on the `Client code:` line. It's set to `FULLFRIDGE`. Give it to new clients when they sign up. You can change it anytime.
 - **The magic link:** text clients `https://fullfridgeco.com/order.html?code=FULLFRIDGE`. When they tap it, the code fills in for them. Their phone remembers it after that.
-- **Orders come to your email** like your other forms. Each one lists what they picked, how many, and the estimated total. In Netlify, they show up under **Forms > weekly-order**.
+- **Orders come to your email** like your other forms. The subject line shows who it's from, like "🥕 New order from Sarah (week of October 26)". The email lists their name and contact info first, then their order by section with the counts in bold, then the total. In Netlify, orders show up under **Forms > weekly-order**.
 - The total doesn't include groceries or kid portions. Clients write kid portions in their own box.
 
 ## Updating services and page text
