@@ -43,6 +43,25 @@
     return options;
   }
 
+  // Emails from your forms are plain text, so these "bold" letters make the
+  // section names and portion counts stand out in your order emails.
+  function boldText(text) {
+    return String(text).replace(/[A-Za-z0-9]/g, function (ch) {
+      var code = ch.charCodeAt(0);
+      if (code >= 65 && code <= 90) return String.fromCodePoint(0x1d5d4 + code - 65);
+      if (code >= 97 && code <= 122) return String.fromCodePoint(0x1d5ee + code - 97);
+      return String.fromCodePoint(0x1d7ec + code - 48);
+    });
+  }
+
+  function sectionEmoji(name) {
+    var n = name.toLowerCase();
+    if (n.indexOf("breakfast") > -1) return "🍳";
+    if (n.indexOf("lunch") > -1) return "🥗";
+    if (n.indexOf("dinner") > -1) return "🍽️";
+    return "🍪";
+  }
+
   function priceText(item) {
     if (!item.options.length) return item.priceNote;
     return item.options
@@ -212,8 +231,9 @@
       el.textContent = menu.weekOf;
     });
 
-    var summaryField = orderForm.querySelector('[name="order_summary"]');
-    var totalField = orderForm.querySelector('[name="estimated_total"]');
+    var summaryField = orderForm.querySelector('[name="your_order"]');
+    var subjectField = orderForm.querySelector('[name="subject"]');
+    var nameField = orderForm.querySelector('[name="client_name"]');
     var totalBox = document.getElementById("order-total");
     var totalAmount = document.getElementById("order-total-amount");
     var totalCount = document.getElementById("order-total-count");
@@ -236,10 +256,11 @@
         var qty = Math.max(0, Math.floor(Number(input.value) || 0));
         if (!qty) return;
         if (row.section !== lastSection) {
-          lines.push((lines.length ? "\n" : "") + row.section);
+          lines.push("");
+          lines.push(sectionEmoji(row.section) + " " + boldText(row.section.toUpperCase()));
           lastSection = row.section;
         }
-        lines.push("- " + row.name + ": " + qty + " (" + money(qty * row.price) + ")");
+        lines.push(boldText(qty + " ×") + "  " + row.name + "  (" + money(qty * row.price) + ")");
         total += qty * row.price;
         count += qty;
       });
@@ -247,9 +268,7 @@
       totalAmount.textContent = money(total);
       totalCount.textContent = count === 1 ? "1 item" : count + " items";
 
-      if (count === 0) {
-        totalNote.textContent = "Plus groceries at cost.";
-      } else if (total < COOK_DAY_MINIMUM) {
+      if (count > 0 && total < COOK_DAY_MINIMUM) {
         totalNote.textContent =
           "Plus groceries at cost. Cook days have a " + money(COOK_DAY_MINIMUM) +
           " minimum, so you're " + money(COOK_DAY_MINIMUM - total) + " away.";
@@ -257,10 +276,28 @@
         totalNote.textContent = "Plus groceries at cost.";
       }
 
-      var picking = choice() === "Pick my meals";
+      var picked = choice();
+      var picking = picked === "Pick my meals";
       totalBox.classList.toggle("is-hidden", !picking);
-      summaryField.value = picking ? lines.join("\n") : "";
-      totalField.value = picking ? money(total) + " plus groceries" : "";
+
+      if (picking && count) {
+        lines.push("");
+        lines.push("💰 " + boldText("TOTAL: " + money(total)) + " plus groceries (" + count + (count === 1 ? " item)" : " items)"));
+        if (total < COOK_DAY_MINIMUM) lines.push("   Under the " + money(COOK_DAY_MINIMUM) + " cook day minimum.");
+      }
+      summaryField.value = picking ? lines.join("\n").replace(/^\n+/, "") : "";
+
+      // The subject line of your order email, so you can spot orders in your inbox
+      var who = nameField.value.trim() || "a client";
+      var labels = {
+        "Pick my meals": "🥕 New order from ",
+        "Chef's Picks": "👩‍🍳 Chef's Picks for ",
+        "Skip this week": "🌙 Skipping this week: "
+      };
+      subjectField.value =
+        (labels[picked] || "🥕 Weekly order from ") + who +
+        (menu.weekOf ? " (week of " + menu.weekOf + ")" : "");
+
       if (count > 0) errorBox.classList.add("is-hidden");
       return count;
     }
