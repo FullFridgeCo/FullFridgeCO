@@ -10,7 +10,8 @@ When you save a change and push it to GitHub, Netlify updates the live site in a
 | --- | --- |
 | `index.html` | Home |
 | `how-it-works.html` | How weekly meal prep works |
-| `menu.html` | This week's menu |
+| `menu.txt` | **This week's menu. Edit this one file each week.** It runs both the menu page and the order form. |
+| `menu.html` | This week's menu page (the dishes come from `menu.txt`) |
 | `pricing.html` | Pricing |
 | `care-packages.html` | Care Packages, plus the gift form |
 | `classes-and-parties.html` | Date night classes and dinner parties, plus the inquiry form |
@@ -19,11 +20,12 @@ When you save a change and push it to GitHub, Netlify updates the live site in a
 | `about.html` | Your story |
 | `from-the-kitchen.html` | Substack signup and featured posts |
 | `get-started.html` | Free call button and the full intake form |
-| `order.html` | Weekly order page (Tally). This is the link you text clients. It's hidden from Google. |
+| `order.html` | Weekly order form with a live total. Clients need the client code to open it. It's hidden from Google. |
 | `thanks-*.html` | The pages people see after sending a form |
 | `404.html` | Shows when someone visits a page that doesn't exist |
 | `js/site.js` | **The header, footer, and referral banner for every page** |
 | `js/forms.js` | Makes some intake questions show up only when needed |
+| `js/menu.js` | Reads `menu.txt` and draws the menu page and the order form. You don't need to edit it. |
 | `css/styles.css` | All the colors, fonts, and layout |
 | `images/` | Favicon, social share image, and a `photos/` folder for your photos |
 
@@ -44,34 +46,44 @@ Search for `PRICE`. Prices show up in a few places, so change all of them:
 - `index.html`: the "from" prices on the four service cards
 - `care-packages.html`: the Care Package price (shows up 3 times)
 - `classes-and-parties.html`: class and dinner party prices
-- `menu.html`: add-on prices (soup, snack box, dessert)
+- `menu.txt`: meal prices (on the `==` lines) and add-on prices (at the end of each add-on line)
+- `js/menu.js`: the $250 cook day minimum the order form reminds people about
 - `thanks-gift.html`: the "Pay now ($395)" button
 - `get-started.html`: the $250 minimum in "The fine print" section
 - Also set your dinner party guest minimum. Search for `[X] guest minimum`.
 
 ## Updating the weekly menu
 
-Open `menu.html` and find the part between **`WEEKLY MENU: START`** and **`WEEKLY MENU: END`**. Only edit inside that part.
+Everything for the week lives in one file: **`menu.txt`**. Your menu page and your order form both read it, so you only change it once.
 
-1. Change the date where it says `[Month Day]`.
-2. Each dish looks like this:
+**The easy way, right on GitHub:**
 
-```html
-<article class="menu-item">
-  <h3>Honey garlic salmon</h3>
-  <p>Glazed salmon with jasmine rice and crisp garlicky green beans.</p>
-  <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--nf">NF</li></ul>
-  <details class="ingredients">
-    <summary>Ingredients</summary>
-    <p>Salmon, honey, tamari, garlic, ...</p>
-  </details>
-</article>
+1. Go to your repo on GitHub and click **`menu.txt`**.
+2. Click the **pencil icon** (Edit this file).
+3. Change the date on the `Week of:` line.
+4. Type over the dishes. Each dish is one line, with its parts split by a `|` line:
+
+```
+Honey garlic salmon | Glazed salmon with jasmine rice and green beans. | GF, NF | Salmon, honey, tamari, garlic, ...
 ```
 
-3. Change the name, description, and ingredients.
-4. For tags, keep only the ones that apply. Use `<li class="tag tag--gf">GF</li>`, `<li class="tag tag--v">V</li>`, or `<li class="tag tag--nf">NF</li>`. Delete the ones that don't apply.
-5. To add a dish, copy a whole `<article> ... </article>` block and paste it right below another one. To remove a dish, delete its whole block.
-6. If the number of dishes changes, update the little "3 choices" note next to the heading.
+   That's the name, the description, the tags (GF, VEG, NF), and the ingredients.
+
+5. To add a dish, add a new line under its section. To remove one, delete its line.
+6. Click **Commit changes**. The site updates in about a minute.
+
+There are more notes at the top of `menu.txt`, including how add-on prices work.
+
+**Or just ask Claude Code:** paste in the new menu and say "update this week's menu."
+
+## The weekly order form
+
+`order.html` is where clients pick their meals. It shows a running total as they go, and it reminds them about the $250 cook day minimum.
+
+- **The client code** is in `menu.txt`, on the `Client code:` line. It's set to `FULLFRIDGE`. Give it to new clients when they sign up. You can change it anytime.
+- **The magic link:** text clients `https://fullfridgeco.com/order.html?code=FULLFRIDGE`. When they tap it, the code fills in for them. Their phone remembers it after that.
+- **Orders come to your email** like your other forms. Each one lists what they picked, how many, and the estimated total. In Netlify, they show up under **Forms > weekly-order**.
+- The total doesn't include groceries or kid portions. Clients write kid portions in their own box.
 
 ## Updating services and page text
 
@@ -106,7 +118,6 @@ Search `EDIT ME`, or check this list:
 | Square payment link for Care Packages | Search `PAYMENT` in `thanks-gift.html` and `care-packages.html`. It's in both places. |
 | Substack embed | `from-the-kitchen.html`. Replace the dashed box. Instructions are in the comment above it. |
 | 3 featured Substack posts | `from-the-kitchen.html`. Look for the `POST` comments. |
-| Tally order form | `order.html`. Replace the dashed box. Instructions are in the comment above it. |
 | Your real web address | If it isn't `fullfridgeco.com`, search for `fullfridgeco.com` and replace it everywhere, including `sitemap.xml` and `robots.txt`. |
 
 ## Forms (Netlify Forms)

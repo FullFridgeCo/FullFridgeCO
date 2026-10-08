@@ -45,7 +45,11 @@
         <div>
           <span class="eyebrow">Fresh this week</span>
           <h1>This week's menu</h1>
-          <p class="lede">Here's what I'm cooking this week. Clients, look for your order link in your texts every Wednesday. Picks are due Friday at noon.</p>
+          <p class="lede">Here's what I'm cooking this week. Clients, pick your meals by Friday at noon.</p>
+          <div class="order-cta order-cta--hero">
+            <a class="btn btn--primary" href="order.html">Clients: place your weekly order</a>
+            <p>New here? <a class="text-link" href="get-started.html">Book a free call</a></p>
+          </div>
         </div>
         <svg class="doodle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><rect x="24" y="16" width="48" height="68" rx="5" class="fill-mustard-soft"/><rect x="20" y="12" width="48" height="68" rx="5" class="line"/><path class="line line--thin" d="M30 26 L58 26"/><circle cx="31" cy="40" r="3" class="fill-mustard"/><path class="line line--thin" d="M38 40 L58 40"/><circle cx="31" cy="52" r="3" class="fill-mustard"/><path class="line line--thin" d="M38 52 L55 52"/><circle cx="31" cy="64" r="3" class="fill-mustard"/><path class="line line--thin" d="M38 64 L57 64"/><path class="line" d="M28 39 L31 43 L36 35"/><path class="line" d="M28 63 L31 67 L36 59"/><path class="fill-olive" d="M74 34 L82 38 L64 80 L58 78 Z" opacity="0.85"/><path class="line" d="M72 32 L80 36 L62 78 L56 84 L55 76 Z"/></g></svg>
       </div>
@@ -56,200 +60,22 @@
 
         <ul class="menu-legend" aria-label="What the tags mean">
           <li><span class="tag tag--gf">GF</span> Made without gluten</li>
-          <li><span class="tag tag--v">V</span> Vegetarian</li>
+          <li><span class="tag tag--v">VEG</span> Vegetarian</li>
           <li><span class="tag tag--nf">NF</span> Nut-free</li>
         </ul>
 
         <!-- =========================================================
-             WEEKLY MENU: START
-             ---------------------------------------------------------
-             Swap this out each week. Everything between START and END
-             is the menu. To change a dish, edit its name, description,
-             tags, and ingredients. To add a dish, copy one whole
-             <article class="menu-item"> ... </article> block and paste
-             it right below. Tags: use tag--gf, tag--v, or tag--nf.
-             See the README for more help.
+             WEEKLY MENU: the dishes come from menu.txt.
+             Edit menu.txt each week, not this page. The order
+             form (order.html) reads the same file.
              ========================================================= -->
-
-        <p class="fine" style="text-align:center;margin-bottom:2.5rem">Menu for the week of <strong>[Month Day]</strong></p>
-
-        <div class="menu-group">
-          <div class="menu-group__head"><h2>Breakfasts</h2><span>3 choices</span></div>
-          <div class="menu-grid">
-            <article class="menu-item">
-              <h3>Sweet potato and sausage egg bites</h3>
-              <p>Fluffy egg bites with roasted sweet potato, chicken sausage, spinach, and a little cheddar.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Eggs, sweet potato, chicken sausage, spinach, cheddar, olive oil, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Berry and cinnamon overnight oats</h3>
-              <p>Creamy oats that are ready the second you open the fridge. Sweetened with a little maple.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Rolled oats, milk, Greek yogurt, chia seeds, maple syrup, cinnamon, vanilla, mixed berries, salt.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Green chile breakfast burritos</h3>
-              <p>Scrambled eggs, crispy potatoes, black beans, and roasted green chile, all wrapped up and ready to warm.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Flour tortillas, eggs, potatoes, black beans, roasted green chile, Monterey Jack, onion, olive oil, cumin, salt, pepper.</p>
-              </details>
-            </article>
-          </div>
+        <div id="weekly-menu">
+          <noscript><p style="text-align:center">The menu needs JavaScript turned on to show up.</p></noscript>
         </div>
 
-        <div class="menu-group">
-          <div class="menu-group__head"><h2>Lunches</h2><span>4 choices</span></div>
-          <div class="menu-grid">
-            <article class="menu-item">
-              <h3>Lemon herb chicken grain bowls</h3>
-              <p>Juicy chicken over farro with cucumber, tomatoes, feta, and a bright lemon herb dressing.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Chicken thighs, farro, cucumber, cherry tomatoes, feta, red onion, parsley, dill, lemon, olive oil, garlic, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Greek chickpea salad</h3>
-              <p>A crunchy, filling salad with chickpeas, olives, peppers, and feta. It holds up beautifully all week.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Chickpeas, cucumber, bell pepper, kalamata olives, red onion, feta, romaine, red wine vinegar, olive oil, oregano, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Turkey and white bean chili</h3>
-              <p>Cozy and mild, with a squeeze of lime and a little cheddar on the side.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Ground turkey, cannellini beans, onion, poblano pepper, garlic, chicken broth, cumin, oregano, lime, cheddar, salt.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Sesame peanut noodle salad</h3>
-              <p>Cold noodles with crunchy veggies and edamame in a sesame peanut sauce.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--v">V</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Spaghetti, peanut butter, peanuts, soy sauce, sesame oil, rice vinegar, honey, ginger, garlic, edamame, carrots, red cabbage, green onion, cilantro.</p>
-              </details>
-            </article>
-          </div>
+        <div class="order-cta">
+          <a class="btn btn--primary" href="order.html">Clients: place your weekly order</a>
         </div>
-
-        <div class="menu-group">
-          <div class="menu-group__head"><h2>Dinners</h2><span>5 choices</span></div>
-          <div class="menu-grid">
-            <article class="menu-item">
-              <h3>Braised short ribs with mashed potatoes</h3>
-              <p>Slow-cooked until tender, with creamy mashed potatoes and honey roasted carrots.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Beef short ribs, red wine, beef broth, tomato paste, onion, carrots, garlic, thyme, Yukon gold potatoes, butter, cream, honey, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Chicken enchiladas verdes</h3>
-              <p>Corn tortillas filled with shredded chicken and baked in tangy salsa verde. Served with cilantro lime rice.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Chicken, corn tortillas, tomatillos, jalapeño, onion, garlic, cilantro, Monterey Jack, sour cream, white rice, lime, salt.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Pesto pasta with roasted vegetables</h3>
-              <p>Basil pesto, roasted zucchini and peppers, and a ball of fresh burrata to tear over the top.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--v">V</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Penne, basil, pine nuts, parmesan, olive oil, garlic, zucchini, red bell pepper, cherry tomatoes, burrata, lemon, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Honey garlic salmon</h3>
-              <p>Glazed salmon with jasmine rice and crisp garlicky green beans.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Salmon, honey, tamari (gluten-free soy sauce), garlic, ginger, jasmine rice, green beans, olive oil, sesame seeds, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Mushroom and spinach lasagna</h3>
-              <p>Layers of ricotta, spinach, and roasted mushrooms in a creamy sauce. Great for a cold night.</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Lasagna noodles, ricotta, mozzarella, parmesan, cremini mushrooms, spinach, egg, milk, butter, flour, garlic, nutmeg, salt, pepper.</p>
-              </details>
-            </article>
-          </div>
-        </div>
-
-        <div class="menu-group">
-          <div class="menu-group__head"><h2>Add-ons</h2><span>Add any of these to your week</span></div>
-          <div class="menu-grid">
-            <article class="menu-item">
-              <h3>Soup by the quart</h3>
-              <p>This week: roasted tomato basil soup. One quart feeds about two people.</p>
-              <!-- PRICE: Soup by the quart -->
-              <p class="menu-item__price">$18 per quart</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Tomatoes, onion, garlic, vegetable broth, basil, cream, olive oil, salt, pepper.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Snack box</h3>
-              <p>A little box of grab-and-go snacks for the week. Think cut veggies, hummus, cheese, and fruit.</p>
-              <!-- PRICE: Snack box -->
-              <p class="menu-item__price">$25 per box</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--gf">GF</li><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Carrots, cucumber, snap peas, hummus (chickpeas, tahini, lemon, garlic), cheddar, grapes, apple.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Dessert</h3>
-              <p>Brown butter chocolate chip cookies. They freeze well, if they last that long.</p>
-              <!-- PRICE: Dessert -->
-              <p class="menu-item__price">$16 for six, or $25 for a dozen</p>
-              <ul class="tags" aria-label="Dietary tags"><li class="tag tag--v">V</li><li class="tag tag--nf">NF</li></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Flour, butter, brown sugar, sugar, eggs, vanilla, baking soda, chocolate chips, flaky salt.</p>
-              </details>
-            </article>
-            <article class="menu-item">
-              <h3>Kid portion</h3>
-              <p>A smaller, simpler version of any meal on the menu. Sauce on the side if you'd like.</p>
-              <!-- PRICE: Kid portion is half price -->
-              <p class="menu-item__price">Half the adult price</p>
-              <ul class="tags" aria-label="Dietary tags"></ul>
-              <details class="ingredients">
-                <summary>Ingredients</summary>
-                <p>Same as the meal you choose.</p>
-              </details>
-            </article>
-          </div>
-        </div>
-
-        <!-- ================= WEEKLY MENU: END ================= -->
 
       </div>
     </section>
@@ -257,7 +83,7 @@
     <section class="section" aria-labelledby="new-title">
       <div class="container narrow" style="text-align:center">
         <h2 id="new-title">New here? Book a free call.</h2>
-        <p class="lede" style="margin:0 auto 2rem">I'd love to cook for you. Once you're a client, I'll text you the order link every Wednesday so you can pick your meals.</p>
+        <p class="lede" style="margin:0 auto 2rem">I'd love to cook for you. Once you're a client, you'll pick your meals right here each week.</p>
         <div class="btn-row" style="justify-content:center">
           <a class="btn btn--primary" href="get-started.html">Book a free call</a>
           <a class="btn btn--ghost" href="how-it-works.html">How it works</a>
@@ -271,5 +97,6 @@
   <div id="site-footer"></div>
 
   <script src="js/site.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 </html>

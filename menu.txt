@@ -1,0 +1,52 @@
+# =========================================================
+# THIS WEEK'S MENU
+# ---------------------------------------------------------
+# This one file runs BOTH your menu page (menu.html) and your
+# order form (order.html). Change it here and both update.
+#
+# How it works:
+#   - Lines that start with # are notes for you. The website ignores them.
+#   - "== Name | price" starts a new section, like Breakfasts.
+#     The price is what every dish in that section costs.
+#   - Every other line is one dish, with parts split by a | line:
+#       Name | Description | Tags | Ingredients | Price (optional)
+#   - Tags can be GF (made without gluten), VEG (vegetarian), and NF (nut-free).
+#     Separate them with commas, or leave that part empty.
+#   - Only give a dish its own price if it's different from its section.
+#     Write the number first, like "18 per quart".
+#     For two sizes, separate them with a comma: "16 for six, 25 for a dozen".
+#     A price that doesn't start with a number (like "Half the adult price")
+#     shows on the menu, but it can't be ordered on the form.
+#
+# Each week: change the date, then type over the dishes.
+# PRICE: meal prices are on the "==" lines. Add-on prices are at the end of each add-on line.
+# =========================================================
+
+Week of: [Month Day]
+
+# The code clients type to open the order form. Change it anytime.
+Client code: FULLFRIDGE
+
+== Breakfasts | 11 per serving
+Sweet potato and sausage egg bites | Fluffy egg bites with roasted sweet potato and savory sausage. Easy to grab on a busy morning. | GF, NF | Eggs, sweet potato, breakfast sausage, spinach, cheddar, salt, pepper.
+Berry and cinnamon overnight oats | Creamy oats with mixed berries and a little cinnamon. Ready to eat straight from the fridge. | GF, VEG, NF | Rolled oats (gluten-free), milk, Greek yogurt, chia seeds, mixed berries, cinnamon, maple syrup.
+Blueberry crumble muffins | Soft blueberry muffins with a buttery cinnamon crumble on top. | VEG, NF | Flour, butter, sugar, brown sugar, eggs, buttermilk, blueberries, vanilla, cinnamon, baking powder, salt.
+
+== Lunches | 14 per serving
+Lemon herb chicken grain bowls | Lemony chicken over quinoa with crunchy veggies and feta. | GF, NF | Chicken, quinoa, cucumber, cherry tomatoes, feta, parsley, lemon, garlic, olive oil, salt, pepper.
+Greek chickpea salad | A bright, filling salad that holds up all week. | GF, VEG, NF | Chickpeas, cucumber, cherry tomatoes, red onion, kalamata olives, feta, oregano, red wine vinegar, olive oil.
+Turkey and white bean chili | A cozy, mild chili with tender white beans and green chiles. | GF, NF | Ground turkey, white beans, onion, garlic, green chiles, cumin, chicken broth, salt, pepper.
+Sesame peanut noodle salad | Cold noodles in a creamy peanut sauce with lots of crunchy veggies. | GF, VEG | Rice noodles, peanut butter, tamari (gluten-free soy sauce), sesame oil, rice vinegar, honey, cabbage, carrots, cucumber, edamame, cilantro.
+
+== Dinners | 18 per serving
+Braised short ribs with mashed potatoes | Slow-cooked short ribs that fall apart, over creamy mashed potatoes. | GF, NF | Beef short ribs, red wine, beef broth, onion, carrots, garlic, thyme, potatoes, butter, cream, salt, pepper.
+Chicken enchiladas verdes | Corn tortillas filled with chicken, topped with salsa verde and melty cheese. | GF, NF | Chicken, corn tortillas, salsa verde, sour cream, Monterey Jack, onion, cilantro.
+Pesto pasta with roasted vegetables | Pasta tossed in basil pesto with a pan of roasted summer veggies. | VEG | Pasta, basil, pine nuts, parmesan, garlic, olive oil, zucchini, cherry tomatoes, bell peppers.
+Honey garlic salmon | Glazed salmon with jasmine rice and crisp garlicky green beans. | GF, NF | Salmon, honey, tamari (gluten-free soy sauce), garlic, ginger, jasmine rice, green beans, olive oil, sesame seeds, salt, pepper.
+Mushroom and spinach lasagna | Layers of mushrooms, spinach, and three cheeses in a rich tomato sauce. | VEG, NF | Lasagna noodles, mushrooms, spinach, ricotta, mozzarella, parmesan, marinara, garlic, olive oil.
+
+== Add-ons
+Roasted tomato basil soup | Smooth, comforting tomato soup made with roasted tomatoes and fresh basil. | GF, VEG, NF | Tomatoes, onion, garlic, basil, vegetable broth, cream, olive oil, salt, pepper. | 18 per quart
+Snack box | A box of easy snacks for the week. | GF, VEG, NF | Cut veggies, hummus, cheese, fruit. | 25 per box
+Brown butter chocolate chip cookies | Chewy cookies with nutty brown butter and plenty of chocolate. | VEG, NF | Flour, butter, brown sugar, sugar, eggs, vanilla, chocolate chips, baking soda, salt. | 16 for six, 25 for a dozen
+Kid portion | A smaller, simpler version of any meal on the menu. Sauce on the side if you'd like. | | Same as the meal you choose. | Half the adult price
