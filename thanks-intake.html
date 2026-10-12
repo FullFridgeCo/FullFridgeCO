@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thank You | Full Fridge Co.</title>
+  <title>Pick a Time | Full Fridge Co.</title>
   <meta name="description" content="Thank you for reaching out to Full Fridge Co.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://fullfridgeco.com/thanks-intake.html">
@@ -11,7 +11,7 @@
   <!-- Social share preview (Facebook, iMessage, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Full Fridge Co.">
-  <meta property="og:title" content="Thank You | Full Fridge Co.">
+  <meta property="og:title" content="Pick a Time | Full Fridge Co.">
   <meta property="og:description" content="Thank you for reaching out to Full Fridge Co.">
   <meta property="og:image" content="https://fullfridgeco.com/images/social-share.png">
   <meta property="og:url" content="https://fullfridgeco.com/thanks-intake.html">
@@ -41,12 +41,23 @@
 
   <main id="main">
 
-    <section class="thanks">
+    <section class="thanks thanks--compact">
       <div class="container narrow">
         <svg class="doodle" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><rect x="26" y="10" width="50" height="82" rx="7" class="fill-mustard"/><rect x="22" y="6" width="50" height="82" rx="7" class="line"/><path class="line" d="M22 34 L72 34 M30 14 L30 26 M30 42 L30 58"/><path class="line" d="M28 88 L28 94 M66 88 L66 94"/></g></svg>
-        <h1>Thank you!</h1>
-        <p>I'll text you within 24 hours to book our free 15-minute call. I can't wait to fill your fridge.</p>
-        <div class="btn-row"><a class="btn btn--ghost" href="kitchen-ready.html">Get your kitchen ready</a><a class="btn btn--ghost" href="menu.html">See this week's menu</a></div>
+        <h1>Thank you! Last step.</h1>
+        <p>Pick a time for our free 15-minute call. I'll call you then, and we'll talk about your week and what you love to eat.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint section--snug" aria-label="Pick a time for our call">
+      <div class="container">
+        <!-- =========================================================
+             CALENDLY: your calendar shows up here. To change which
+             calendar, edit the link in data-url below. The little
+             script under it fills in their name and email for them.
+             ========================================================= -->
+        <div id="calendly-box" class="calendly-box" data-url="https://calendly.com/fullfridgeco/30min?hide_gdpr_banner=1&amp;background_color=fffdf8&amp;text_color=2e2c22&amp;primary_color=6b7436"></div>
+        <p class="fine" style="text-align:center;margin-top:1.5rem">Calendar not showing up? <a class="text-link" href="https://calendly.com/fullfridgeco/30min">Open it here</a>.</p>
       </div>
     </section>
 
@@ -56,5 +67,23 @@
   <div id="site-footer"></div>
 
   <script src="js/site.js"></script>
+  <script>
+    // Show the Calendly calendar, with their name and email already filled in
+    (function () {
+      var box = document.getElementById("calendly-box");
+      var url = box.getAttribute("data-url");
+      try {
+        var name = sessionStorage.getItem("ffc-chat-name");
+        var email = sessionStorage.getItem("ffc-chat-email");
+        if (name) url += "&name=" + encodeURIComponent(name);
+        if (email) url += "&email=" + encodeURIComponent(email);
+      } catch (err) {}
+      box.innerHTML = '<div class="calendly-inline-widget" data-url="' + url.replace(/"/g, "&quot;") + '" style="min-width:300px;height:720px"></div>';
+      var script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
 </body>
 </html>

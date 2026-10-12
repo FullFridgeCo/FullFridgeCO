@@ -19,7 +19,8 @@ When you save a change and push it to GitHub, Netlify updates the live site in a
 | `faq.html` | Questions |
 | `about.html` | Your story |
 | `from-the-kitchen.html` | Substack signup and featured posts |
-| `get-started.html` | Free call button and the full intake form |
+| `get-started.html` | The short "Let's chat" form. After sending it, people pick a call time on your calendar. |
+| `profile.html` | The full client profile form. Send it to clients after your call. It's hidden from Google and needs the client code. |
 | `order.html` | Weekly order form with a live total. Clients need the client code to open it. It's hidden from Google. |
 | `thanks-*.html` | The pages people see after sending a form |
 | `404.html` | Shows when someone visits a page that doesn't exist |
@@ -76,6 +77,12 @@ There are more notes at the top of `menu.txt`, including how add-on prices work.
 
 **Or just ask Claude Code:** paste in the new menu and say "update this week's menu."
 
+## How new clients sign up
+
+1. **They fill out the short form** on `get-started.html`: name, contact info, ZIP, household size, what they're interested in, and how they heard about you. It takes about a minute. You get an email like your other forms (Netlify calls it **lets-chat**).
+2. **They pick a call time** on the next page (`thanks-intake.html`), which shows your Calendly calendar with their name and email already filled in. To change the calendar, edit the Calendly link in that file (search `CALENDLY`).
+3. **After your call, send them the full profile form.** Text them this link, which opens the form without typing the code: `https://fullfridgeco.com/profile.html?code=FULLFRIDGE`. Their answers come to your email (Netlify calls it **intake**).
+
 ## The weekly order form
 
 `order.html` is where clients pick their meals. It shows a running total as they go, and it reminds them about the $250 cook day minimum.
@@ -114,7 +121,7 @@ Search `EDIT ME`, or check this list:
 | What | Where |
 | --- | --- |
 | Email, Substack, Google review link | Top of `js/site.js`. The Google review link stays hidden until you fill it in. |
-| Scheduling link for the free call | `get-started.html`, the "Book a free 15-minute call" button |
+| Scheduling link for the free call | `thanks-intake.html`, search `CALENDLY` (it shows up twice in that file) |
 | Square payment link for Care Packages | Search `PAYMENT` in `thanks-gift.html` and `care-packages.html`. It's in both places. |
 | Substack embed | `from-the-kitchen.html`. Replace the dashed box. Instructions are in the comment above it. |
 | 3 featured Substack posts | `from-the-kitchen.html`. Look for the `POST` comments. |
