@@ -36,7 +36,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 - **Hosting:** Netlify project `fullfridgewebsite` (https://fullfridgewebsite.netlify.app), deployed from the `main` branch of GitHub repo `FullFridgeCo/FullFridgeCO`. A push to `main` goes live in about a minute.
 - **Forms:** Netlify Forms (`lets-chat`, `intake`, `care-package-gift`, `class-party-inquiry`, `weekly-order`). Each has `data-netlify="true"`, a hidden `form-name` input, a honeypot `bot-field`, and its own thank-you page (`thanks-*.html`). Form detection is on, and submission emails go to Jordyn.
 - **Shared header, footer, and referral banner:** these all live in `js/site.js`. Contact info is at the top of that file, marked `EDIT ME`.
-- **Conditional and required checkbox questions:** handled by `js/forms.js`, using `data-show-if`, `data-required-if-shown`, and `data-required-group`.
+- **Conditional and required checkbox questions:** handled by `js/forms.js`, using `data-show-if`, `data-required-if-shown`, and `data-required-group`. It runs on every `<form>`, because Netlify strips `data-netlify` from the published HTML, so never select forms by that attribute. Anything starting with `is-hidden` stays hidden if this script doesn't run.
 - **Colors and fonts:** CSS variables at the top of `css/styles.css`. Mustard, olive, and cream. Fraunces for headings, DM Sans for body text.
 - **Illustrations:** hand-drawn style inline SVGs. Every page includes the `#sketchy` SVG filter that gives the lines their wobble. Use no stock photos. Photo spots are dashed `.photo-slot` boxes.
 - **Markers for Jordyn:** prices are marked with `PRICE` comments, and links to fill in with `EDIT ME`.

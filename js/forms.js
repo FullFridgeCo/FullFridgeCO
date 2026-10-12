@@ -13,7 +13,9 @@
    ========================================================= */
 
 (function () {
-  var forms = document.querySelectorAll("form[data-netlify]");
+  // Every form on the page. (Netlify removes the data-netlify attribute when
+  // it publishes the site, so we can't look for that.)
+  var forms = document.querySelectorAll("form");
   if (!forms.length) return;
 
   forms.forEach(function (form) {
