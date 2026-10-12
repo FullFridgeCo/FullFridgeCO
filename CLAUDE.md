@@ -73,6 +73,10 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
 6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
 7. **Go public:** the Netlify project is set to Private. When the site is ready, Jordyn clicks **Make public** in Netlify.
 
+## Flyer
+
+Jordyn has a printable flyer (made in a cloud session, not stored in the repo). It has a QR code to `https://fullfridgeco.com/get-started.html` and a flyer offer: "Your first week comes with a free quart of soup or six cookies, on me. Just pick 'A flyer' when you sign up." The Get Started form has an "A flyer" option under "How did you hear about Full Fridge Co.?", which asks where they saw it (`flyer_location`) and repeats the offer. If the offer changes, update both.
+
 ## Contact
 
 Site email: fullfridgeco@gmail.com (set in `js/site.js`).
