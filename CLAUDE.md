@@ -75,7 +75,7 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
 
 ## Flyer
 
-Jordyn has a printable flyer (made in a cloud session, not stored in the repo). It has a QR code to `https://fullfridgeco.com/get-started.html` and a flyer offer: "Your first week comes with a free quart of soup or six cookies, on me. Just pick 'A flyer' when you sign up." The Get Started form has an "A flyer" option under "How did you hear about Full Fridge Co.?", which asks where they saw it (`flyer_location`) and repeats the offer. If the offer changes, update both.
+Jordyn has a printable flyer (made in a cloud session, not stored in the repo). It has a QR code to `https://fullfridgeco.com/get-started.html`. There is no flyer offer. Jordyn dropped the "free soup or cookies" idea because anyone could pick "A flyer" on the form to get it. The Get Started form's "A flyer" option just asks where they saw it (`flyer_location`), so Jordyn can track which spots work.
 
 ## Contact
 
