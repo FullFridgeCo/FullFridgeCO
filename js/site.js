@@ -12,7 +12,7 @@
   /* ---------- EDIT ME: your links and contact info ---------- */
   var SITE = {
     email: "fullfridgeco@gmail.com", // EDIT ME: your email
-    substackUrl: "https://jordynmoody.substack.com", // EDIT ME: your Substack
+    substackUrl: "https://substack.com/@fullfridgeco", // EDIT ME: your Substack
     googleReviewUrl: "", // EDIT ME: your Google review link. Leave it empty ("") to hide the link.
     serviceArea: "Arvada, Colorado, and about 30 minutes around it"
   };
