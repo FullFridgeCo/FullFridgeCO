@@ -132,9 +132,18 @@
                 <label class="choice"><input type="radio" name="heard_about" value="Other"> Other</label>
               </div>
             </fieldset>
+            <!-- These boxes only show up for the answer above them -->
             <div class="field is-hidden" data-show-if="heard_about=Friend referral">
               <label for="referred_by">Who referred you? (so they get their free add-on)</label>
               <input type="text" id="referred_by" name="referred_by" data-required-if-shown>
+            </div>
+            <div class="field is-hidden" data-show-if="heard_about=Neighborhood group">
+              <label for="neighborhood_group">Which group?</label>
+              <input type="text" id="neighborhood_group" name="neighborhood_group" data-required-if-shown>
+            </div>
+            <div class="field is-hidden" data-show-if="heard_about=Other">
+              <label for="heard_about_other">Where did you hear about me?</label>
+              <input type="text" id="heard_about_other" name="heard_about_other" data-required-if-shown>
             </div>
             <div class="field">
               <label for="notes">Anything you'd like me to know? <span class="optional">(optional)</span></label>
