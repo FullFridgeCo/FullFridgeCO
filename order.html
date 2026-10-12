@@ -67,7 +67,7 @@
         </noscript>
 
         <!-- Clients only: the code check. Clients who tap the link you text them skip this. -->
-        <div id="order-gate" class="is-hidden">
+        <div id="client-gate" class="is-hidden">
           <form id="gate-form" class="form-section gate" novalidate>
             <div class="form-section__head">
               <span class="form-section__num" aria-hidden="true">&#9733;</span>
@@ -91,7 +91,7 @@
           </form>
         </div>
 
-        <div id="order-form-wrap" class="is-hidden">
+        <div id="gated-content" class="is-hidden">
           <form id="order-form" name="weekly-order" method="POST" action="/thanks-order.html" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="weekly-order">
             <p class="honeypot"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>

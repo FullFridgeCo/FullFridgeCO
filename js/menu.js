@@ -5,12 +5,14 @@
    edit menu.txt instead. This file reads menu.txt and:
      - on menu.html, draws the menu cards
      - on order.html, draws the order form with a live total
+     - on order.html and profile.html, checks the client code
    ========================================================= */
 
 (function () {
   var menuBox = document.getElementById("weekly-menu");
   var orderForm = document.getElementById("order-form");
-  if (!menuBox && !orderForm) return;
+  var clientGate = document.getElementById("client-gate");
+  if (!menuBox && !orderForm && !clientGate) return;
 
   // PRICE: the minimum for one cook day
   var COOK_DAY_MINIMUM = 250;
@@ -329,14 +331,14 @@
     update();
   }
 
-  /* ---------- Client code check (order page) ---------- */
+  /* ---------- Client code check (order page and profile page) ---------- */
 
   function setUpGate(menu) {
-    var gate = document.getElementById("order-gate");
+    var gate = clientGate;
     var gateForm = document.getElementById("gate-form");
     var codeInput = document.getElementById("client-code");
     var wrong = document.getElementById("gate-wrong");
-    var formWrap = document.getElementById("order-form-wrap");
+    var formWrap = document.getElementById("gated-content");
     var realCode = menu.clientCode.toUpperCase();
 
     function matches(code) {
@@ -384,13 +386,11 @@
     .then(function (text) {
       var menu = parseMenu(text);
       if (menuBox) drawMenu(menu);
-      if (orderForm) {
-        drawOrderForm(menu);
-        setUpGate(menu);
-      }
+      if (orderForm) drawOrderForm(menu);
+      if (clientGate) setUpGate(menu);
     })
     .catch(function () {
-      var box = menuBox || document.getElementById("order-gate");
+      var box = menuBox || clientGate;
       box.classList.remove("is-hidden");
       box.innerHTML =
         '<div class="panel" style="text-align:center"><p>Sorry, the menu didn\'t load. Please refresh the page. If it still doesn\'t work, just text me your order.</p></div>';
