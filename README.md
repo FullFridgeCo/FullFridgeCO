@@ -98,8 +98,8 @@ All the words are right in the HTML files. Find the sentence you want to change 
 ## Adding your photos
 
 1. Put your photo in `images/photos/`. Use a short name with no spaces, like `salmon-dinner.jpg`. Try to keep each photo under about 500 KB. [Squoosh](https://squoosh.app/) is a free way to shrink them.
-2. Find the dashed placeholder box in the HTML. It looks like `<div class="photo-slot">Your photo here...</div>`.
-3. Replace that whole line with:
+2. Find the spot in the HTML. On the home page and the Classes & Parties page, the photo spots hold hand-drawn pictures for now. Each one starts with `<div class="art-slot">` and ends with `</svg></div>`. Anywhere else, it's a dashed box that looks like `<div class="photo-slot">Your photo here...</div>`.
+3. Replace that whole block with:
 
 ```html
 <img class="photo" src="images/photos/salmon-dinner.jpg" alt="Honey garlic salmon with rice and green beans in a glass container">
