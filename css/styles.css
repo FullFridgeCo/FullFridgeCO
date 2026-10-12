@@ -2125,3 +2125,8 @@ textarea:focus {
 .thanks--compact .doodle {
   width: 110px;
 }
+
+/* Avoid a single word left alone on the last line of a hint */
+.hint {
+  text-wrap: pretty;
+}

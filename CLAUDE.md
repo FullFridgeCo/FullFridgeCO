@@ -36,7 +36,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 - **Hosting:** Netlify project `fullfridgewebsite` (https://fullfridgewebsite.netlify.app), deployed from the `main` branch of GitHub repo `FullFridgeCo/FullFridgeCO`. A push to `main` goes live in about a minute.
 - **Forms:** Netlify Forms (`lets-chat`, `intake`, `care-package-gift`, `class-party-inquiry`, `weekly-order`). Each has `data-netlify="true"`, a hidden `form-name` input, a honeypot `bot-field`, and its own thank-you page (`thanks-*.html`). Form detection is on, and submission emails go to Jordyn.
 - **Shared header, footer, and referral banner:** these all live in `js/site.js`. Contact info is at the top of that file, marked `EDIT ME`.
-- **Conditional and required checkbox questions:** handled by `js/forms.js`, using `data-show-if`, `data-required-if-shown`, and `data-required-group`.
+- **Conditional and required checkbox questions:** handled by `js/forms.js`, using `data-show-if`, `data-required-if-shown`, and `data-required-group`. It runs on every `<form>`, because Netlify strips `data-netlify` from the published HTML, so never select forms by that attribute. Anything starting with `is-hidden` stays hidden if this script doesn't run.
 - **Colors and fonts:** CSS variables at the top of `css/styles.css`. Mustard, olive, and cream. Fraunces for headings, DM Sans for body text.
 - **Illustrations:** hand-drawn style inline SVGs. Every page includes the `#sketchy` SVG filter that gives the lines their wobble. Use no stock photos. Photo spots are dashed `.photo-slot` boxes.
 - **Markers for Jordyn:** prices are marked with `PRICE` comments, and links to fill in with `EDIT ME`.
@@ -72,6 +72,10 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
    - The Substack embed (`from-the-kitchen.html`)
 6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
 7. **Go public:** the Netlify project is set to Private. When the site is ready, Jordyn clicks **Make public** in Netlify.
+
+## Flyer
+
+Jordyn has a printable flyer (made in a cloud session, not stored in the repo). It has a QR code to `https://fullfridgeco.com/get-started.html` and a flyer offer: "Your first week comes with a free quart of soup or six cookies, on me. Just pick 'A flyer' when you sign up." The Get Started form has an "A flyer" option under "How did you hear about Full Fridge Co.?", which asks where they saw it (`flyer_location`) and repeats the offer. If the offer changes, update both.
 
 ## Contact
 

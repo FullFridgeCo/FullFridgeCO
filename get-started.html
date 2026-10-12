@@ -129,6 +129,7 @@
                 <label class="choice"><input type="radio" name="heard_about" value="Google"> Google</label>
                 <label class="choice"><input type="radio" name="heard_about" value="Substack"> Substack</label>
                 <label class="choice"><input type="radio" name="heard_about" value="Neighborhood group"> Neighborhood group</label>
+                <label class="choice"><input type="radio" name="heard_about" value="Flyer"> A flyer</label>
                 <label class="choice"><input type="radio" name="heard_about" value="Other"> Other</label>
               </div>
             </fieldset>
@@ -140,6 +141,12 @@
             <div class="field is-hidden" data-show-if="heard_about=Neighborhood group">
               <label for="neighborhood_group">Which group?</label>
               <input type="text" id="neighborhood_group" name="neighborhood_group" data-required-if-shown>
+            </div>
+            <div class="field is-hidden" data-show-if="heard_about=Flyer">
+              <label for="flyer_location">Where did you see it?</label>
+              <!-- PRICE: flyer offer. This matches what the printed flyer promises. -->
+              <span class="hint" id="flyer_location-hint">Thanks for noticing it! Your first week comes with a free quart of soup or six cookies, on me.</span>
+              <input type="text" id="flyer_location" name="flyer_location" data-required-if-shown aria-describedby="flyer_location-hint">
             </div>
             <div class="field is-hidden" data-show-if="heard_about=Other">
               <label for="heard_about_other">Where did you hear about me?</label>
