@@ -58,7 +58,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 
 ## Still to do
 
-Done so far: README repo name fixed, Substack set to `https://jordynmoody.substack.com`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`, Square Care Package link (`https://square.link/u/B7BjkRT6`) added to `care-packages.html` and `thanks-gift.html` (search `PAYMENT`), weekly order form built on the site (Jordyn chose this over Tally so clients see a live total), Jordyn's first real menu (week of October 26) added to `menu.txt`, vegetarian tag renamed from V to VEG (Jordyn felt V reads as vegan).
+Done so far: README repo name fixed, Substack set to `https://substack.com/@fullfridgeco`, Calendly link added to `get-started.html`, Google review link hidden until Jordyn has one, gift message card and recipe cards approved, vegan "point you toward someone" line removed, add-on prices set (soup $18/quart, snack box $25, cookies $16 for six or $25 for a dozen), dinner parties set to 6 to 10 guests, referral perk wording approved, About story written by Jordyn and added to `about.html`, Square Care Package link (`https://square.link/u/B7BjkRT6`) added to `care-packages.html` and `thanks-gift.html` (search `PAYMENT`), weekly order form built on the site (Jordyn chose this over Tally so clients see a live total), Jordyn's first real menu (week of October 26) added to `menu.txt`, vegetarian tag renamed from V to VEG (Jordyn felt V reads as vegan).
 
 1. **Links still missing:**
    - Google review link (top of `js/site.js`). The footer link is hidden while it's empty.
@@ -66,10 +66,9 @@ Done so far: README repo name fixed, Substack set to `https://jordynmoody.substa
 3. **Food handler card:** Jordyn is taking the ServSafe Food Handler course. Once done, add it to the food safety answer in `faq.html`. Keep the current answer until then.
 4. **Insurance:** Jordyn is looking into personal chef liability insurance. Nothing on the site yet.
 5. **Replace placeholder content:**
-   - Testimonials (`index.html`)
+   - Testimonials (`index.html`): the section is `hidden` until Jordyn has real quotes.
    - Food photos (optional now): the 3 spots on `index.html` (fridge shelf, plated dinner, cooking) and the 2 on `classes-and-parties.html` hold hand-drawn SVG illustrations in `.art-slot` boxes. Jordyn chose drawings over photos for now. Swap in her own photos only. Don't use stock or blog photos, which came up once. Photos of Jordyn are in `images/photos/`: the coconut cake photo on the home page and About page, plus two snapshots on About (Ty and Jordyn making dumplings, and "My first kitchen job"). Jordyn chose not to use a photo of her baking with two kids.
-   - The 3 featured Substack posts
-   - The Substack embed (`from-the-kitchen.html`)
+   - The 3 featured Substack posts (`from-the-kitchen.html`): that section is `hidden` until there are posts. The signup is a "Subscribe on Substack" button to `https://substack.com/@fullfridgeco` (Jordyn's link). Swap in Substack's embed if she wants it.
 6. **Finish the domain:** Jordyn bought `fullfridgeco.com` through Squarespace, so the site's canonical and og tags already match it. DNS is set in Squarespace (A `@` to `75.2.60.5`, CNAME `www` to `fullfridgewebsite.netlify.app`), and the domain is added in Netlify. Still to do: wait for the HTTPS certificate (Netlify > Domain management > HTTPS > Verify DNS configuration), then make `fullfridgeco.com` the primary domain. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
 7. **Go public:** the Netlify project is set to Private. When the site is ready, Jordyn clicks **Make public** in Netlify.
 
