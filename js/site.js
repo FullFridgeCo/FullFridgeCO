@@ -14,7 +14,7 @@
     email: "fullfridgeco@gmail.com", // EDIT ME: your email
     substackUrl: "https://substack.com/@fullfridgeco", // EDIT ME: your Substack
     googleReviewUrl: "", // EDIT ME: your Google review link. Leave it empty ("") to hide the link.
-    serviceArea: "Arvada, Colorado, and about 30 minutes around it"
+    serviceArea: "All around the Denver area"
   };
 
   /* ---------- Main menu (top of every page) ---------- */
@@ -98,7 +98,7 @@
     "</ul>" +
     "</div>" +
     "</div>" +
-    '<div class="site-footer__bottom">&copy; ' + year + " Full Fridge Co. Made with care in Arvada, CO.</div>" +
+    '<div class="site-footer__bottom">&copy; ' + year + " Full Fridge Co. Made with care in Colorado.</div>" +
     "</div></footer>";
 
   var headerSlot = document.getElementById("site-header");
