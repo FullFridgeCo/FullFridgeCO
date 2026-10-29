@@ -98,9 +98,9 @@ All the words are right in the HTML files. Find the sentence you want to change 
 
 **About page:** the story on `about.html` is placeholder copy, so please rewrite it in your own words.
 
-**Testimonials:** on `index.html`, look for the `TESTIMONIALS` comment. Replace each placeholder quote and name, then delete the line that says `<span class="placeholder-tag">Placeholder</span>`.
+**Testimonials:** on `index.html`, look for the `TESTIMONIALS` comment. The section is turned off (commented out) for now. When you have real quotes, replace each placeholder quote and name, delete the lines that say `<span class="placeholder-tag">Placeholder</span>`, then delete the line that says `TESTIMONIALS START` and the line that says `TESTIMONIALS END`. That turns the section back on.
 
-**Header, footer, and banner:** edit these in `js/site.js` only. The change shows up on every page. Your email, Substack link, Google review link, and service area are at the top of that file, marked `EDIT ME`.
+**Header, footer, and banner:** edit these in `js/site.js` only. The change shows up on every page. Your email, phone number, Substack link, Google review link, and service area are at the top of that file, marked `EDIT ME`.
 
 ## Adding your photos
 
@@ -120,7 +120,7 @@ Search `EDIT ME`, or check this list:
 
 | What | Where |
 | --- | --- |
-| Email, Substack, Google review link | Top of `js/site.js`. The Google review link stays hidden until you fill it in. |
+| Email, phone, Substack, Google review link | Top of `js/site.js`. Your phone number is also typed into `faq.html`, `order.html`, `profile.html`, and `thanks-order.html`, so search for `415-2195` if it ever changes. The Google review link stays hidden until you fill it in. |
 | Scheduling link for the free call | `thanks-intake.html`, search `CALENDLY` (it shows up twice in that file) |
 | Square payment link for Care Packages | Search `PAYMENT` in `thanks-gift.html` and `care-packages.html`. It's in both places. |
 | Substack embed | `from-the-kitchen.html`. Replace the dashed box. Instructions are in the comment above it. |
