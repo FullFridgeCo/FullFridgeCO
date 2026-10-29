@@ -35,7 +35,7 @@ Just right: "Tell me a little about your week so I can find the best day to come
 - Plain static HTML and CSS, with a little vanilla JS. No frameworks and no build step. Jordyn edits the files by hand, so keep the code simple and well commented.
 - **Hosting:** Netlify project `fullfridgewebsite` (https://fullfridgewebsite.netlify.app), deployed from the `main` branch of GitHub repo `FullFridgeCo/FullFridgeCO`. A push to `main` goes live in about a minute.
 - **Forms:** Netlify Forms (`lets-chat`, `intake`, `care-package-gift`, `class-party-inquiry`, `weekly-order`). Each has `data-netlify="true"`, a hidden `form-name` input, a honeypot `bot-field`, and its own thank-you page (`thanks-*.html`). Form detection is on, and submission emails go to Jordyn.
-- **Shared header, footer, and referral banner:** these all live in `js/site.js`. Contact info is at the top of that file, marked `EDIT ME`.
+- **Shared header, footer, and referral banner:** these all live in `js/site.js`. Contact info (email and phone) is at the top of that file, marked `EDIT ME`. The phone also appears as a `tel:` link in `faq.html`, `order.html`, `profile.html`, and `thanks-order.html`.
 - **Conditional and required checkbox questions:** handled by `js/forms.js`, using `data-show-if`, `data-required-if-shown`, and `data-required-group`. It runs on every `<form>`, because Netlify strips `data-netlify` from the published HTML, so never select forms by that attribute. Anything starting with `is-hidden` stays hidden if this script doesn't run.
 - **Colors and fonts:** CSS variables at the top of `css/styles.css`. Mustard, olive, and cream. Fraunces for headings, DM Sans for body text.
 - **Illustrations:** hand-drawn style inline SVGs. Every page includes the `#sketchy` SVG filter that gives the lines their wobble. Use no stock photos. Photo spots are dashed `.photo-slot` boxes.
@@ -66,7 +66,7 @@ Done so far: README repo name fixed, Substack set to `https://substack.com/@full
 3. **Food handler card:** Jordyn is taking the ServSafe Food Handler course. Once done, add it to the food safety answer in `faq.html`. Keep the current answer until then.
 4. **Insurance:** Jordyn is looking into personal chef liability insurance. Nothing on the site yet.
 5. **Replace placeholder content:**
-   - Testimonials (`index.html`): the section is `hidden` until Jordyn has real quotes.
+   - Testimonials (`index.html`): the section is commented out (between `TESTIMONIALS START` and `TESTIMONIALS END`) until Jordyn has real quotes.
    - Food photos (optional now): the 3 spots on `index.html` (fridge shelf, plated dinner, cooking) and the 2 on `classes-and-parties.html` hold hand-drawn SVG illustrations in `.art-slot` boxes. Jordyn chose drawings over photos for now. Swap in her own photos only. Don't use stock or blog photos, which came up once. Photos of Jordyn are in `images/photos/`: the coconut cake photo on the home page and About page, plus two snapshots on About (Ty and Jordyn making dumplings, and "My first kitchen job"). Jordyn chose not to use a photo of her baking with two kids.
    - The 3 featured Substack posts (`from-the-kitchen.html`): that section is `hidden` until there are posts. The signup is a "Subscribe on Substack" button to `https://substack.com/@fullfridgeco` (Jordyn's link). Swap in Substack's embed if she wants it.
 6. **Domain and going public:** done. `fullfridgeco.com` is the primary domain and the site is public. Squarespace's Email Security records currently block sending email from the domain. Change them if Jordyn sets up an @fullfridgeco.com email.
@@ -78,4 +78,8 @@ Jordyn has a printable flyer (made in a cloud session, not stored in the repo). 
 
 ## Contact
 
-Site email: fullfridgeco@gmail.com (set in `js/site.js`).
+Site email: fullfridgeco@gmail.com. Phone (call or text): (480) 415-2195. Both are set in `js/site.js`.
+
+## Trust and price messaging
+
+The home page leans on a takeout comparison: lunches and dinners for two, five days a week, is $320 plus groceries (about $20 a meal with groceries), and the same 20 meals from a delivery app can run over $500. This math is on `index.html` ("What it costs" box and the Weekly Meal Prep card), `pricing.html`, and the FAQ "luxury" answer. Update all of them if prices change. Promises made on the site: same cook every week, texts on arrival and when leaving (with a fridge photo), a short weekly check-in, a kitchen walkthrough before the first cook day, and a suggested four-week trial. Say "made without gluten," never "gluten-free," for Jordyn's food.

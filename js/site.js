@@ -4,7 +4,7 @@
    Every page loads this file. Edit the header, footer, or
    referral banner HERE and the change shows up on every page.
 
-   Look for "EDIT ME" to find your email, Substack link,
+   Look for "EDIT ME" to find your email, phone, Substack link,
    Google review link, and service area.
    ========================================================= */
 
@@ -12,6 +12,8 @@
   /* ---------- EDIT ME: your links and contact info ---------- */
   var SITE = {
     email: "fullfridgeco@gmail.com", // EDIT ME: your email
+    phone: "(480) 415-2195", // EDIT ME: your phone, the way people should see it
+    phoneLink: "+14804152195", // EDIT ME: the same number with +1 and digits only
     substackUrl: "https://substack.com/@fullfridgeco", // EDIT ME: your Substack
     googleReviewUrl: "", // EDIT ME: your Google review link. Leave it empty ("") to hide the link.
     serviceArea: "All around the Denver area"
@@ -27,7 +29,10 @@
     { href: "about.html", label: "About" }
   ];
 
+  // Which page are we on? Netlify also serves pages without ".html"
+  // (like /pricing), so add it back before comparing.
   var here = location.pathname.split("/").pop() || "index.html";
+  if (here.indexOf(".") === -1) here += ".html";
 
   function navLinks() {
     return NAV.map(function (item) {
@@ -79,6 +84,7 @@
     "<div>" +
     "<h2>Say hi</h2>" +
     "<ul>" +
+    '<li><a href="tel:' + SITE.phoneLink + '">Call or text ' + SITE.phone + "</a></li>" +
     '<li><a href="mailto:' + SITE.email + '">' + SITE.email + "</a></li>" +
     '<li><a href="' + SITE.substackUrl + '">Read my Substack</a></li>' +
     // The review link only shows once googleReviewUrl is filled in above

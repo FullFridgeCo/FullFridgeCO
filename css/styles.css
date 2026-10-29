@@ -2130,3 +2130,23 @@ textarea:focus {
 .hint {
   text-wrap: pretty;
 }
+
+/* ---------- Home page: trust line and "What it costs" box ---------- */
+.hero__note + .hero__note {
+  margin-top: 0.5rem;
+}
+
+.price-note {
+  max-width: 40rem;
+  margin: 3.5rem auto 0;
+  text-align: center;
+}
+
+.price-note h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+}
+
+/* Keep phone numbers on one line */
+a[href^="tel:"] {
+  white-space: nowrap;
+}

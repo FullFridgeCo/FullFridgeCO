@@ -32,6 +32,8 @@
     "name": "Full Fridge Co.",
     "description": "In-home personal chef and weekly meal prep in the Denver area.",
     "url": "https://fullfridgeco.com/",
+    "telephone": "+1-480-415-2195",
+    "email": "fullfridgeco@gmail.com",
     "areaServed": "Denver metro area",
     "address": { "@type": "PostalAddress", "addressRegion": "CO", "addressCountry": "US" }
   }
@@ -64,6 +66,11 @@
             <a class="btn btn--primary" href="get-started.html">Book a free call</a>
             <a class="btn btn--ghost" href="how-it-works.html">See how it works</a>
           </div>
+          <!-- Trust line under the buttons -->
+          <p class="hero__note">
+            <svg class="doodle" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><circle class="fill-mustard-soft" cx="12" cy="12" r="9"/><path class="line line--thin" d="M7 12.5 L10.5 16 L17 8.5"/></g></svg>
+            Same cook every week &middot; You don't need to be home &middot; No subscription
+          </p>
           <p class="hero__note">
             <svg class="doodle" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g filter="url(#sketchy)"><path class="line line--thin" d="M12 21 C 7 15, 5 12, 5 9 a7 7 0 0 1 14 0 c0 3 -2 6 -7 12 Z"/><circle class="fill-mustard" cx="12" cy="9" r="2.6"/></g></svg>
             Cooking for homes all around the Denver area.
@@ -272,9 +279,9 @@
               </g>
             </svg>
             <h3>Weekly Meal Prep</h3>
-            <p>Fresh meals cooked in your kitchen on the same day each week. Skip or pause any week you need to.</p>
-            <!-- PRICE: Weekly Meal Prep starting price -->
-            <p class="card__price">From <strong>$11</strong> a serving, plus groceries</p>
+            <p>Fresh meals cooked in your kitchen on the same day each week. Kid portions are half price. Skip or pause any week you need to.</p>
+            <!-- PRICE: Weekly Meal Prep. This is the lunches and dinners for two example from pricing.html. -->
+            <p class="card__price">About <strong>$320</strong> a week for two, plus groceries</p>
             <a class="text-link" href="how-it-works.html">How it works</a>
           </article>
 
@@ -334,7 +341,15 @@
           </article>
         </div>
 
-        <p class="steps-footer"><a class="text-link" href="pricing.html">See all pricing</a></p>
+        <!-- ===== WHAT IT COSTS =====
+             PRICE: this uses the lunches and dinners example from pricing.html.
+             If prices change, update this math too. -->
+        <div class="price-note panel" aria-labelledby="cost-title">
+          <span class="eyebrow">What it costs</span>
+          <h2 id="cost-title">About what you'd spend on takeout</h2>
+          <p>Lunches and dinners for two, five days a week, comes to $320 plus groceries. That's about $20 a meal with groceries included. The same 20 meals from a delivery app can easily run over $500. These are cooked fresh in your kitchen, and the grocery receipt is itemized.</p>
+          <a class="text-link" href="pricing.html">See all pricing</a>
+        </div>
       </div>
     </section>
 
@@ -342,13 +357,15 @@
     <section class="section section--tint" aria-labelledby="realfood-title">
       <div class="container split split--flip">
         <div>
-          <span class="eyebrow">Why people love it</span>
+          <span class="eyebrow">What you can count on</span>
           <h2 id="realfood-title">Real food that tastes like someone cares</h2>
           <p>Everything is cooked fresh in your own kitchen with real ingredients. I learn what you love, what you'd rather skip, and which one of you can't stand cilantro. Then I make food you actually look forward to.</p>
           <ul class="check-list">
-            <li>Labeled and portioned, so grabbing lunch takes ten seconds</li>
-            <li>Gluten-free and vegetarian choices every week</li>
-            <li>Ingredients listed for every single dish</li>
+            <li>It's me every week. Same person, same kitchen, and I remember who skips mushrooms.</li>
+            <li>You don't need to be home. A door code or lockbox works.</li>
+            <li>I text when I get there, and again when I leave with a photo of your full fridge.</li>
+            <li>Groceries at cost, with an itemized receipt after every cook day.</li>
+            <li>Vegetarian and made-without-gluten choices every week.</li>
             <li>No subscription. Skip any week by Friday at noon.</li>
           </ul>
         </div>
@@ -426,14 +443,13 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS ARE HIDDEN until you have real quotes. To show them, fill in
-         the quotes below and delete the word "hidden" from the <section> line. -->
-    <!-- ================= TESTIMONIALS =================
-         Replace each placeholder with a real quote and the client's
-         first name (and neighborhood, if they're okay with it).
-         Then delete the "Placeholder" tag line.
-    -->
-    <section class="section section--tint" aria-labelledby="quotes-title" hidden>
+    <!-- ================= TESTIMONIALS (turned off) =================
+         This section is commented out until you have real quotes.
+         To bring it back: put in each quote with the client's first name,
+         delete the "Placeholder" tag lines, then delete the line that says
+         TESTIMONIALS START and the line that says TESTIMONIALS END. -->
+    <!-- TESTIMONIALS START
+    <section class="section section--tint" aria-labelledby="quotes-title">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Kind words</span>
@@ -458,6 +474,7 @@
         </div>
       </div>
     </section>
+    TESTIMONIALS END -->
 
     <!-- ================= FINAL CALL TO ACTION ================= -->
     <section class="section section--olive" aria-labelledby="cta-title">
@@ -474,6 +491,7 @@
           </g>
         </svg>
         <h2 id="cta-title">Ready to stop thinking about dinner?</h2>
+        <p>It's okay to need help with dinner. Most people do. They just don't say it.</p>
         <p>Let's have a quick 15-minute call. Tell me a little about your week and what you like to eat, and I'll tell you how I can help. No pressure at all.</p>
         <a class="btn btn--primary" href="get-started.html">Book a free call</a>
         <small>Cooking for homes all around the Denver area.</small>
